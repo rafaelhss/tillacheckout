@@ -1,14 +1,17 @@
 <div class="col-md-6 col-md-padding-3">
-    <div ng-controller = "ComprovanteController" id="btnPhoto" class="big-icon" >
+    <div ng-controller="ComprovanteController" id="btnPhoto" class="big-icon">
 
         <div ng-show="!uploading">
 
             <div class="alert alert-success" ng-show="vendaConcluida">
-                <strong>Obrigada!</strong> Sua compra (codigo {{vendaConcluida.codigo}}) foi registrada e será postada em, no máximo, um dia útil.
+                <strong>Obrigada!</strong> Sua compra (codigo {{vendaConcluida.codigo}}) foi registrada e será postada em,
+                no máximo, um dia útil.
             </div>
             <div ng-show="vendaConcluida">
-                <h4>Não deixe de conferir sempre as novidades no nosso site:</h4>
-            <p><a type="button" href="http://www.ateliermakeup.com.br" class="btn btn-info btn-lg"><span>Ir para o site</span></a></p>
+                <h3>Não deixe de conferir sempre as novidades no nosso site:</h3>
+                <p><a type="button" href="http://www.ateliermakeup.com.br" class="btn btn-info btn-lg"><span>Ir para o site</span></a></p>
+                <h3>Lembre-se, voce pode ver o estado do pedido sempre que quiser aqui.</h3>
+                <p><a type="button" href="#/consultar" class="btn btn-default btn-lg"><i class="fa fa-search"></i> <span>Consultar</span></a></p>
             </div>
 
             <div class="alert alert-danger" ng-show="erro">
@@ -16,7 +19,7 @@
             </div>
 
 
-            <div ng-hide="fileSet() || vendaConcluida" >
+            <div ng-hide="fileSet() || vendaConcluida">
                 <h3>Agora mande o comprovantezinho pra gente...</h3>
                 <label for="upload">
                     <span  type="button" class="btn btn-success btn-lg"><i class="fa fa-file-image-o" aria-hidden="true"></i> Escolher Comprovante</span>
@@ -27,45 +30,45 @@
                 <h3>Pronto! Agora é só conferir e mandar!</h3>
                 <table class="table">
                     <thead>
-                    <tr>
-                        <th>contato</th>
-                    </tr>
+                        <tr>
+                            <th>contato</th>
+                        </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>
-                            <i class="fa" ng-class="whatsapp != 'null' && whatsapp ? 'fa-whatsapp' : 'fa-facebook-square'"></i>
-                            <span>{{whatsapp != 'null' && whatsapp ? whatsapp : facebook}}</span>
-                        </td>
-                    </tr>
+                        <tr>
+                            <td>
+                                <i class="fa" ng-class="whatsapp != 'null' && whatsapp ? 'fa-whatsapp' : 'fa-facebook-square'"></i>
+                                <span>{{whatsapp != 'null' && whatsapp ? whatsapp : facebook}}</span>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
                 <table class="table">
                     <thead>
-                    <tr>
-                        <th>Endereço de entrega</th>
-                    </tr>
+                        <tr>
+                            <th>Endereço de entrega</th>
+                        </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>{{endereco.logradouro}} n.{{endereco.numero}} <span ng-show="endereco.ap">compl. {{endereco.ap}} </span> <br/> {{endereco.cidade}}-{{endereco.estado}}<br/>{{endereco.cep}}</td>
-                    </tr>
+                        <tr>
+                            <td>{{endereco.logradouro}} n.{{endereco.numero}} <span ng-show="endereco.ap">compl. {{endereco.ap}} </span>                                <br/> {{endereco.cidade}}-{{endereco.estado}}<br/>{{endereco.cep}}</td>
+                        </tr>
                     </tbody>
                 </table>
                 <table class="table">
                     <thead>
-                    <tr>
-                        <th>Produtos</th>
-                    </tr>
+                        <tr>
+                            <th>Produtos</th>
+                        </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>{{produtos}}</td>
-                    </tr>
+                        <tr>
+                            <td>{{produtos}}</td>
+                        </tr>
                     </tbody>
                 </table>
 
-                <p><span type="button" ng-show="fileSet()"  ng-click="uploadFile()" class="btn btn-success btn-lg"><i class="fa fa-paper-plane" aria-hidden="true"></i> Enviar Informações</span></p>
+                <p><span type="button" ng-show="fileSet()" ng-click="uploadFile()" class="btn btn-success btn-lg"><i class="fa fa-paper-plane" aria-hidden="true"></i> Enviar Informações</span></p>
                 <p><label for="upload2">
                     <span  type="button" class="btn btn-default btn-lg"> <i class="fa fa-file-image-o" aria-hidden="true"></i> Trocar o Comprovante escolhido</span>
                     <input type="file"  id="upload2" style="display:none" file-model="myFile"/>
@@ -75,8 +78,8 @@
 
 
 
-        </div >
-        <div ng-show="uploading" class="big-icon" >
+        </div>
+        <div ng-show="uploading" class="big-icon">
             <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
         </div>
     </div>

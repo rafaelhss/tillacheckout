@@ -2,8 +2,8 @@
 var app = angular.module("tillaApp", ['ngRoute', 'ngDialog', 'ng-file-model']);
 
 app.service('TillaConfig',function(){
-    this.apiUrl = "https://tillacheckout.herokuapp.com/api";
-    this.adminUrl = "https://tillacheckout.herokuapp.com/admin";
+    this.apiUrl = "http://localhost:8080/api";
+    this.adminUrl = "http://localhost:8080/admin";
 });
 
 
