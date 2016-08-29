@@ -17,7 +17,6 @@
     <table class="table table-striped" ng-show="vendas">
         <thead>
             <tr>
-                <th>Contato</th>
                 <th>Produtos</th>
                 <th>Data</th>
                 <th>Comprovante</th>
@@ -28,10 +27,6 @@
 
 
             <tr ng-repeat="venda in vendas">
-                <td>
-                    <i class="fa" ng-class="venda.whatsapp != 'null' ? 'fa-whatsapp' : 'fa-facebook-square'"></i>
-                    <span>{{venda.whatsapp != 'null' ? venda.whatsapp : venda.facebook}}</span>
-                </td>
                 <td>{{venda.produtos}}</td>
                 <td>{{venda.data}}</td>
                 <td><a ng-href="{{url}}/vendas/{{venda.codigo}}/comprovantes/image">comprovante</a> </td>
