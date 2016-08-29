@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="tillaApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/x2js/xml2json.js"></script>
+
+    <script src="bower_components/ng-dialog/js/ngDialog.min.js"></script>
+
+
+    <script src="js/tillaapp.js"></script>
+    <script src="js/Upload.js"></script>
+    <script src="js/VendasController.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Tilla Checkout</title>
+
+</head>
+
+<body ng-controller="tillaCtrl">
+    <div class="container" ng-controller="VendasController">
+
+        <div class="jumbotron logo">
+            <h1>Tilla Viana</h1>
+            <h2 class="fancy"><span>Checkout</span></h2>
+        </div>
+         <div class="row session">
+             <div class="col-md-6 col-md-padding-3">
+
+                 <table class="table table-striped" file-model="filem">
+                     <thead>
+                     <tr>
+                         <th>Contato</th>
+                         <th>Produtos</th>
+                         <th>Data</th>
+                         <th>Comprovante</th>
+                         <th>Estado</th>
+                     </tr>
+                     </thead>
+                     <tbody>
+
+
+
+
+
+
+
+                     <tr ng-repeat="venda in vendas">
+                         <td>
+                             <i class="fa" ng-class="venda.whatsapp != 'null' ? 'fa-whatsapp' : 'fa-facebook-square'"></i>
+                             <span>{{venda.whatsapp != 'null' ? venda.whatsapp : venda.facebook}}</span>
+                         </td>
+                         <td>{{venda.produtos}}</td>
+                         <td>{{venda.data}}</td>
+                         <td><a ng-href="{{url}}/comprovantes/{{venda.comprovante.id}}/image">comprovante</a> </td>
+                         <td>Nao Entregue
+
+                             <div ng-hide="fileSet()" >
+                                 <label for="upload{{venda.codigo}}">
+                                     <span  type="button" class="btn btn-success btn-lg"><i class="fa fa-file-image-o" aria-hidden="true"></i> Escolher Comprovante PAC</span>
+                                     <input type="file"  id="upload{{venda.codigo}}" style="display:none" ng-model="filem"/>
+                                 </label>
+                             </div>
+                             myFil3:{{myFile3}}
+                             vendas.codigo : {{venda.codigo}}
+                             <div>
+                                 <p><span type="button"  ng-click="uploadFile3(venda.codigo)" class="btn btn-success btn-lg"><i class="fa fa-paper-plane" aria-hidden="true"></i> Enviar Comprovante PAC</span></p>
+                                 </p>
+                             </div>
+
+                         <div ng-show="uploading" class="big-icon" >
+                             <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+                         </div>
+                         </td>
+                     </tr>
+                     </tbody>
+                 </table>
+             </div>
+
+         </div>
+    </div>
+
+
+</body>
+</html>
