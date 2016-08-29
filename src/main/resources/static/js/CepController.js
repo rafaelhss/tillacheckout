@@ -12,7 +12,7 @@ app.controller("CepController", function ($scope, $http, $location) {
         $scope.carregando = true;
         
         console.log('cep:' + cep );
-        $http.get("http://api.postmon.com.br/v1/cep/" + cep.toString().replace(/\D/g,''))
+        $http.get("https://api.postmon.com.br/v1/cep/" + cep.toString().replace(/\D/g,''))
             .then(function (response){
                 $scope.endereco = response.data;
                 $scope.cepnaoencontrado = false;
