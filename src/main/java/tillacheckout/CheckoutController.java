@@ -1,11 +1,9 @@
 package tillacheckout;
 
-import com.google.common.collect.Lists;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.security.oauth2.client.EnableOAuth2Sso;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -16,7 +14,6 @@ import tillacheckout.venda.Venda;
 import tillacheckout.venda.VendaRepository;
 import tillacheckout.venda.VendaService;
 import tillacheckout.venda.comprovante.Comprovante;
-import tillacheckout.venda.comprovante.ComprovanteRepository;
 import tillacheckout.venda.endereco.Endereco;
 import tillacheckout.venda.endereco.EnderecoDeserializer;
 
@@ -29,7 +26,6 @@ import javax.xml.bind.DatatypeConverter;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.util.List;
 
 @SpringBootApplication
 @RestController
@@ -38,9 +34,6 @@ public class CheckoutController {
 
     @Autowired
     private VendaService vendaService;
-
-    @Autowired
-    private ComprovanteRepository comprovanteRepository;
 
     @Autowired
     private VendaRepository vendaRepository;
@@ -85,7 +78,7 @@ public class CheckoutController {
         }
     }
 
-
+/*
     @RequestMapping(method = RequestMethod.GET, value="/api/{user}/comprovantes/{id}/image")
     @ResponseBody
     public ResponseEntity<InputStreamResource> getImage(@PathVariable("id") Long id){
@@ -119,6 +112,6 @@ public class CheckoutController {
         return null;
     }
 
-
+*/
 
 }

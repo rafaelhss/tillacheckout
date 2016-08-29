@@ -16,14 +16,16 @@ app.controller("VendasController", function ($scope, $http, $location, TillaConf
 
 
     $scope.uploadFile3 = function(codigo){
-        var file = $scope.myFile1;
+        var file = $scope.file;
 
 
         var fd = new FormData();
         fd.append('file', file);
 
+
         console.log('myFile1 is ' );
         console.dir(file);
+        console.log(codigo);
         var uploadUrl = TillaConfig.adminUrl +
             '/vendas/' + codigo + '/comprovantes-pac/';
 

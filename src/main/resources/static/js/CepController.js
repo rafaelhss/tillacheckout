@@ -5,10 +5,13 @@
 
 app.controller("CepController", function ($scope, $http, $location) {
 
+    $scope.cep = Number(localStorage.getItem("cep"));
+
     //http://api.postmon.com.br/v1/cep/31160440
     $scope.carregarEndereco = function(cep) {
         $scope.carregando = true;
-        $http.get("http://api.postmon.com.br/v1/cep/" + cep)
+      //  console.log('cep:' + cep.replace(/\D/g,'') + ' (' + cep + ')');
+        $http.get("http://api.postmon.com.br/v1/cep/" + cep.replace(/\D/g,''))
             .then(function (response){
                 $scope.endereco = response.data;
                 $scope.cepnaoencontrado = false;
@@ -27,6 +30,7 @@ app.controller("CepController", function ($scope, $http, $location) {
     $scope.processar = function(endereco){
         if(endereco.numero) {
             localStorage.setItem("endereco", JSON.stringify(endereco));
+            localStorage.setItem("cep", endereco.cep);
             $location.path('/produtos');
         }
     }

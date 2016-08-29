@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import tillacheckout.user.Cliente;
 import tillacheckout.venda.comprovante.Comprovante;
+import tillacheckout.venda.comprovante.ComprovantePac;
 import tillacheckout.venda.endereco.Endereco;
 
 import javax.persistence.*;
@@ -35,6 +36,9 @@ public class Venda {
 
     @OneToOne(cascade = CascadeType.ALL)
     private Comprovante comprovante;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    private ComprovantePac comprovantePac;
 
     private Date data;
 

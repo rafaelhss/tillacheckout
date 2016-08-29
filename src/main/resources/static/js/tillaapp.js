@@ -1,5 +1,5 @@
 
-var app = angular.module("tillaApp", ['ngRoute', 'ngDialog']);
+var app = angular.module("tillaApp", ['ngRoute', 'ngDialog', 'ng-file-model']);
 
 app.service('TillaConfig',function(){
     this.apiUrl = "http://localhost:8080/api";
@@ -32,31 +32,27 @@ app.config(function($routeProvider, $locationProvider) {
     $routeProvider
         .when('/whatsapp', {
             templateUrl: 'html/whatsapp.html',
-            controller: 'WhatsappController',
+            controller: 'WhatsappController'
         })
         .when('/facebook', {
             templateUrl: 'html/facebook.html',
-            controller: 'FacebookController',
+            controller: 'FacebookController'
         })
         .when('/cep', {
             templateUrl: 'html/cep.html',
-            controller: 'CepController',
+            controller: 'CepController'
         })
         .when('/produtos', {
             templateUrl: 'html/produtos.html',
-            controller: 'ProdutosController',
+            controller: 'ProdutosController'
         })
         .when('/comprovante', {
             templateUrl: 'html/comprovante.html',
-            controller: 'ComprovanteController',
-        })
-        .when('/vendas', {
-            templateUrl: 'html/vendas.html',
-            controller: 'VendasController',
+            controller: 'ComprovanteController'
         })
         .when('/login', {
             templateUrl: 'html/login.html',
-            controller: 'LoginController',
+            controller: 'LoginController'
 
         })
         .otherwise({

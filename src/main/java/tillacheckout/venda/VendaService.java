@@ -5,9 +5,7 @@ import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import tillacheckout.user.Cliente;
 import tillacheckout.venda.comprovante.Comprovante;
-import tillacheckout.venda.comprovante.ComprovanteRepository;
 import tillacheckout.venda.endereco.Endereco;
 
 import javax.xml.bind.DatatypeConverter;
@@ -23,10 +21,6 @@ public class VendaService {
 
     @Autowired
     private VendaRepository vendaRepository;
-
-    @Autowired
-    private ComprovanteRepository comprovanteRepository;
-
 
 
     @Transactional
@@ -44,6 +38,7 @@ public class VendaService {
         venda.setProdutos(produtos);
         venda.setData(new Date());
         venda.setCliente(contato);
+
 
      //   comprovanteRepository.save(comprovante);
        return vendaRepository.save(venda);

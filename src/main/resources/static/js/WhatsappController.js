@@ -2,6 +2,10 @@
  * Created by rafa on 27/08/2016.
  */
 app.controller("WhatsappController", function ($scope, $http, $location) {
+
+    $scope.whatsapp = localStorage.getItem("whatsapp");
+
+
     $scope.validarWhatsapp = function(whatsapp) {
         $scope.whatsappinvalido = true;
         if(whatsapp.length >= 10 && whatsapp.length <= 11){

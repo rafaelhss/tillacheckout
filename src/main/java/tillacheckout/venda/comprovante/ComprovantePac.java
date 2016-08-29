@@ -18,10 +18,8 @@ public class ComprovantePac {
     private Long id;
 
     //@Lob
-    @Column( length = 100000 )
+    @Column( length = 1000000 )
     private byte[] file;
     //private File file;
 
-    @OneToOne
-    private Venda venda;
 }
