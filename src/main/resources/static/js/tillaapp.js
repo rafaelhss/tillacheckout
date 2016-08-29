@@ -55,6 +55,11 @@ app.config(function($routeProvider, $locationProvider) {
             controller: 'LoginController'
 
         })
+        .when('/consultar', {
+            templateUrl: 'html/consultar.html',
+            controller: 'ConsultarController'
+
+        })
         .otherwise({
             templateUrl: 'html/home.html'
         });
