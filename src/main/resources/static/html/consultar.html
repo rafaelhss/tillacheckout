@@ -28,7 +28,7 @@
 
             <tr ng-repeat="venda in vendas">
                 <td>{{venda.produtos}}</td>
-                <td>{{venda.data}}</td>
+                <td>{{ venda.data | date : "d/M/yyyy h:mm a" }}</td>
                 <td><a ng-href="{{url}}/vendas/{{venda.codigo}}/comprovantes/image">comprovante</a> </td>
                 <td>
                     <div ng-hide="venda.comprovantePac">
