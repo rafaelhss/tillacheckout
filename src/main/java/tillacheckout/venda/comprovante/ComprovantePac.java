@@ -18,7 +18,7 @@ public class ComprovantePac {
     private Long id;
 
     //@Lob
-    @Column( length = 1000000 )
+    @Column( length = 5000000 )
     private byte[] file;
     //private File file;
 
