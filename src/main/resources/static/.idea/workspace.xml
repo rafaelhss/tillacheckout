@@ -67,8 +67,8 @@
       <file leaf-file-name="tillaapp.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/tillaapp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.4458381" vertical-offset="459" max-vertical-offset="1360">
-              <caret line="4" column="17" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.15507412" vertical-offset="0" max-vertical-offset="1360">
+              <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -163,8 +163,8 @@
         <option value="$PROJECT_DIR$/js/CepController.js" />
         <option value="$PROJECT_DIR$/vendas.html" />
         <option value="$PROJECT_DIR$/html/comprovante.html" />
-        <option value="$PROJECT_DIR$/js/tillaapp.js" />
         <option value="$PROJECT_DIR$/js/ConsultarController.js" />
+        <option value="$PROJECT_DIR$/js/tillaapp.js" />
       </list>
     </option>
   </component>
@@ -790,8 +790,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/tillaapp.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.4458381" vertical-offset="459" max-vertical-offset="1360">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.15507412" vertical-offset="0" max-vertical-offset="1360">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
           <folding />
         </state>
       </provider>
