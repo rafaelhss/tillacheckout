@@ -64,7 +64,7 @@ app.config(function($routeProvider, $locationProvider) {
 
         })
         .otherwise({
-            templateUrl: 'html/home.html'
+            templateUrl: 'html/index.html'
         });
 
 
