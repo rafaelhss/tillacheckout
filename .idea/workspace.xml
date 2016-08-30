@@ -2,8 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30db8fe7-f605-4804-875e-0944eed977e4" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application.properties" afterPath="$PROJECT_DIR$/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tillacheckout/AdminController.java" afterPath="$PROJECT_DIR$/src/main/java/tillacheckout/AdminController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tillacheckout/CheckoutController.java" afterPath="$PROJECT_DIR$/src/main/java/tillacheckout/CheckoutController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tillacheckout/venda/VendaRepository.java" afterPath="$PROJECT_DIR$/src/main/java/tillacheckout/venda/VendaRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tillacheckout/venda/VendaService.java" afterPath="$PROJECT_DIR$/src/main/java/tillacheckout/venda/VendaService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tillacheckout/venda/comprovante/Comprovante.java" afterPath="$PROJECT_DIR$/src/main/java/tillacheckout/venda/comprovante/Comprovante.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tillacheckout/venda/comprovante/ComprovantePac.java" afterPath="$PROJECT_DIR$/src/main/java/tillacheckout/venda/comprovante/ComprovantePac.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/.idea/workspace.xml" afterPath="$PROJECT_DIR$/src/main/resources/static/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/ConsultarController.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/ConsultarController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tillaapp.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/tillaapp.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tillacheckout.iml" afterPath="$PROJECT_DIR$/tillacheckout.iml" />
     </list>
     <ignored path="tillacheckout.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,7 +40,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/tillacheckout/venda/VendaService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <caret line="39" column="72" selection-start-line="39" selection-start-column="72" selection-end-line="39" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="false" />
               </folding>
@@ -41,13 +52,16 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/tillacheckout/CheckoutController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="114" column="2" selection-start-line="114" selection-start-column="2" selection-end-line="114" selection-end-column="2" />
+              <caret line="39" column="19" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
               <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#1385#1386#0" expanded="false" />
-                <element signature="e#1414#1415#0" expanded="false" />
-                <element signature="e#1472#1473#0" expanded="false" />
-                <element signature="e#1501#1502#0" expanded="false" />
+                <element signature="e#1408#1409#0" expanded="false" />
+                <element signature="e#1437#1438#0" expanded="false" />
+                <element signature="e#1495#1496#0" expanded="false" />
+                <element signature="e#1524#1525#0" expanded="false" />
+                <marker date="1472563103378" expanded="false" signature="31:1143" placeholder="..." />
+                <marker date="1472563103378" expanded="true" signature="2007:2688" placeholder="{...}" />
+                <marker date="1472563103378" expanded="true" signature="2694:2805" placeholder="@{...}" />
+                <marker date="1472563103378" expanded="true" signature="2901:3004" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -57,8 +71,12 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/tillacheckout/AdminController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
-              <folding />
+              <caret line="58" column="87" selection-start-line="58" selection-start-column="87" selection-end-line="58" selection-end-column="87" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#1418#1419#0" expanded="false" />
+                <element signature="e#1460#1461#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -66,7 +84,7 @@
       <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.5185184">
+            <state vertical-scroll-proportion="0.0">
               <caret line="4" column="52" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
               <folding />
             </state>
@@ -77,8 +95,10 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/tillacheckout/venda/comprovante/ComprovantePac.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-              <folding />
+              <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -87,7 +107,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/tillacheckout/venda/Venda.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="37" column="15" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
+              <caret line="40" column="41" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="false" />
               </folding>
@@ -95,25 +115,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tillacheckout/Application.java">
+      <file leaf-file-name="VendaRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tillacheckout/venda/VendaRepository.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#239#240#0" expanded="false" />
-                <element signature="e#301#302#0" expanded="false" />
-              </folding>
+              <caret line="11" column="49" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="38" column="12" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.5511222">
+              <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -123,18 +139,20 @@
         <entry file="file://$PROJECT_DIR$/application.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Comprovante.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Comprovante.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/tillacheckout/venda/comprovante/Comprovante.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4">
-              <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-              <folding />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -164,7 +182,6 @@
         <option value="$PROJECT_DIR$/src/main/java/tillacheckout/venda/comprovante/ComprovanteRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/tillacheckout/venda/VendaVO.java" />
         <option value="$PROJECT_DIR$/src/main/java/tillacheckout/venda/endereco/EnderecoDeserializer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tillacheckout/venda/VendaRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/tillacheckout/venda/endereco/Endereco.java" />
         <option value="$PROJECT_DIR$/application.yml" />
         <option value="$PROJECT_DIR$/src/main/java/tillacheckout/user/User.java" />
@@ -174,14 +191,15 @@
         <option value="$PROJECT_DIR$/src/main/java/tillacheckout/WebSecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/tillacheckout/venda/comprovantepac/comprovante/Comprovante.java" />
         <option value="$PROJECT_DIR$/src/main/java/tillacheckout/venda/comprovante/ComprovantePacRepository.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/tillacheckout/venda/Venda.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tillacheckout/venda/comprovante/Comprovante.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tillacheckout/venda/comprovante/ComprovantePac.java" />
         <option value="$PROJECT_DIR$/src/main/java/tillacheckout/venda/VendaService.java" />
         <option value="$PROJECT_DIR$/src/main/java/tillacheckout/CheckoutController.java" />
         <option value="$PROJECT_DIR$/src/main/java/tillacheckout/AdminController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tillacheckout/venda/VendaRepository.java" />
         <option value="$PROJECT_DIR$/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/tillacheckout/venda/comprovante/Comprovante.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tillacheckout/venda/comprovante/ComprovantePac.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -204,8 +222,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1552" />
-    <option name="height" value="840" />
+    <option name="width" value="1696" />
+    <option name="height" value="1036" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -232,8 +250,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -393,6 +409,8 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -407,19 +425,19 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\rafa\Documents\Projects\tillacheckout\tillacheckout" />
-    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="tillacheckout.venda.endereco" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rafa\Documents\Projects\tillacheckout\tillacheckout\src\main\java\tillacheckout\venda\comprovantepac" />
+      <recent name="C:\Users\rafa\Documents\Projects\tillacheckout\tillacheckout" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="tillacheckout.venda.comprovante" />
       <recent name="tillacheckout" />
       <recent name="tillacheckout.venda" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\rafa\Documents\Projects\tillacheckout\tillacheckout\src\main\java\tillacheckout\venda\comprovantepac" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\rafa\Documents\Projects\tillacheckout\tillacheckout" />
     </key>
   </component>
@@ -630,34 +648,34 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1552" height="840" extended-state="6" />
+    <frame x="-8" y="-8" width="1696" height="1036" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14678285" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32964602" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49668142" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14669926" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41261062" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41261062" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32964602" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49668142" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32964602" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -697,6 +715,24 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tillacheckout/venda/comprovante/Comprovante.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tillacheckout/venda/VendaService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -712,11 +748,14 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="114" column="2" selection-start-line="114" selection-start-column="2" selection-end-line="114" selection-end-column="2" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1385#1386#0" expanded="false" />
-            <element signature="e#1414#1415#0" expanded="false" />
-            <element signature="e#1472#1473#0" expanded="false" />
-            <element signature="e#1501#1502#0" expanded="false" />
+            <element signature="e#1408#1409#0" expanded="false" />
+            <element signature="e#1437#1438#0" expanded="false" />
+            <element signature="e#1495#1496#0" expanded="false" />
+            <element signature="e#1524#1525#0" expanded="false" />
+            <marker date="1472563103378" expanded="false" signature="31:1143" placeholder="..." />
+            <marker date="1472563103378" expanded="true" signature="2007:2688" placeholder="{...}" />
+            <marker date="1472563103378" expanded="true" signature="2694:2805" placeholder="@{...}" />
+            <marker date="1472563103378" expanded="true" signature="2901:3004" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -725,7 +764,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1418#1419#0" expanded="false" />
+            <element signature="e#1460#1461#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -733,7 +776,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -751,11 +796,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#239#240#0" expanded="false" />
-            <element signature="e#301#302#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -779,7 +820,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -798,11 +841,14 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="77" column="38" selection-start-line="77" selection-start-column="38" selection-end-line="77" selection-end-column="38" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1385#1386#0" expanded="false" />
-            <element signature="e#1414#1415#0" expanded="false" />
-            <element signature="e#1472#1473#0" expanded="false" />
-            <element signature="e#1501#1502#0" expanded="false" />
+            <element signature="e#1408#1409#0" expanded="false" />
+            <element signature="e#1437#1438#0" expanded="false" />
+            <element signature="e#1495#1496#0" expanded="false" />
+            <element signature="e#1524#1525#0" expanded="false" />
+            <marker date="1472563103378" expanded="false" signature="31:1143" placeholder="..." />
+            <marker date="1472563103378" expanded="true" signature="2007:2688" placeholder="{...}" />
+            <marker date="1472563103378" expanded="true" signature="2694:2805" placeholder="@{...}" />
+            <marker date="1472563103378" expanded="true" signature="2901:3004" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -811,7 +857,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="96" column="47" selection-start-line="96" selection-start-column="47" selection-end-line="96" selection-end-column="47" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1418#1419#0" expanded="false" />
+            <element signature="e#1460#1461#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -819,7 +869,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -845,11 +897,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#239#240#0" expanded="false" />
-            <element signature="e#301#302#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -873,7 +921,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -892,11 +942,14 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="35" column="2" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="2" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1385#1386#0" expanded="false" />
-            <element signature="e#1414#1415#0" expanded="false" />
-            <element signature="e#1472#1473#0" expanded="false" />
-            <element signature="e#1501#1502#0" expanded="false" />
+            <element signature="e#1408#1409#0" expanded="false" />
+            <element signature="e#1437#1438#0" expanded="false" />
+            <element signature="e#1495#1496#0" expanded="false" />
+            <element signature="e#1524#1525#0" expanded="false" />
+            <marker date="1472563103378" expanded="false" signature="31:1143" placeholder="..." />
+            <marker date="1472563103378" expanded="true" signature="2007:2688" placeholder="{...}" />
+            <marker date="1472563103378" expanded="true" signature="2694:2805" placeholder="@{...}" />
+            <marker date="1472563103378" expanded="true" signature="2901:3004" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -905,7 +958,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1418#1419#0" expanded="false" />
+            <element signature="e#1460#1461#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -931,11 +988,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#239#240#0" expanded="false" />
-            <element signature="e#301#302#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -961,11 +1014,14 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="35" column="2" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="2" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1385#1386#0" expanded="false" />
-            <element signature="e#1414#1415#0" expanded="false" />
-            <element signature="e#1472#1473#0" expanded="false" />
-            <element signature="e#1501#1502#0" expanded="false" />
+            <element signature="e#1408#1409#0" expanded="false" />
+            <element signature="e#1437#1438#0" expanded="false" />
+            <element signature="e#1495#1496#0" expanded="false" />
+            <element signature="e#1524#1525#0" expanded="false" />
+            <marker date="1472563103378" expanded="false" signature="31:1143" placeholder="..." />
+            <marker date="1472563103378" expanded="true" signature="2007:2688" placeholder="{...}" />
+            <marker date="1472563103378" expanded="true" signature="2694:2805" placeholder="@{...}" />
+            <marker date="1472563103378" expanded="true" signature="2901:3004" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -974,7 +1030,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1418#1419#0" expanded="false" />
+            <element signature="e#1460#1461#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1000,11 +1060,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#239#240#0" expanded="false" />
-            <element signature="e#301#302#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1051,37 +1107,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tillacheckout/venda/VendaRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28333333">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tillacheckout/Application.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#239#240#0" expanded="false" />
-            <element signature="e#301#302#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="12" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tillacheckout/venda/Venda.java">
+    <entry file="file://$PROJECT_DIR$/application.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="15" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
+          <caret line="4" column="52" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tillacheckout/venda/comprovante/Comprovante.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tillacheckout/venda/comprovante/ComprovantePac.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
@@ -1091,7 +1146,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/tillacheckout/venda/VendaService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <caret line="39" column="72" selection-start-line="39" selection-start-column="72" selection-end-line="39" selection-end-column="72" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
@@ -1101,29 +1156,46 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/tillacheckout/CheckoutController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="114" column="2" selection-start-line="114" selection-start-column="2" selection-end-line="114" selection-end-column="2" />
+          <caret line="39" column="19" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1385#1386#0" expanded="false" />
-            <element signature="e#1414#1415#0" expanded="false" />
-            <element signature="e#1472#1473#0" expanded="false" />
-            <element signature="e#1501#1502#0" expanded="false" />
+            <element signature="e#1408#1409#0" expanded="false" />
+            <element signature="e#1437#1438#0" expanded="false" />
+            <element signature="e#1495#1496#0" expanded="false" />
+            <element signature="e#1524#1525#0" expanded="false" />
+            <marker date="1472563103378" expanded="false" signature="31:1143" placeholder="..." />
+            <marker date="1472563103378" expanded="true" signature="2007:2688" placeholder="{...}" />
+            <marker date="1472563103378" expanded="true" signature="2694:2805" placeholder="@{...}" />
+            <marker date="1472563103378" expanded="true" signature="2901:3004" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application.yml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tillacheckout/venda/Venda.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.5185184">
-          <caret line="4" column="52" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="40" column="41" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tillacheckout/AdminController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+          <caret line="58" column="87" selection-start-line="58" selection-start-column="87" selection-end-line="58" selection-end-column="87" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1418#1419#0" expanded="false" />
+            <element signature="e#1460#1461#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tillacheckout/venda/VendaRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="49" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
           <folding />
         </state>
       </provider>
@@ -1131,23 +1203,15 @@
     <entry file="file://$PROJECT_DIR$/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tillacheckout/venda/comprovante/ComprovantePac.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tillacheckout/venda/comprovante/Comprovante.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4">
-          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.5511222">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1192,7 +1256,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>1.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

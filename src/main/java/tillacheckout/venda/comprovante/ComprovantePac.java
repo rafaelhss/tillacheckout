@@ -1,5 +1,6 @@
 package tillacheckout.venda.comprovante;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 import tillacheckout.venda.Venda;
@@ -18,6 +19,7 @@ public class ComprovantePac {
     private Long id;
 
     //@Lob
+    @JsonIgnore
     @Column( length = 5000000 )
     private byte[] file;
     //private File file;

@@ -56,7 +56,7 @@ public class AdminController {
 
         if(authentication.getPrincipal().equals(RAFA) || authentication.getPrincipal().equals(TILLA)) {
         */
-            return Lists.newArrayList(vendaRepository.findAll());
+            return Lists.newArrayList(vendaRepository.findAllByOrderByComprovantePacAsc());
        /* }
         else
         {

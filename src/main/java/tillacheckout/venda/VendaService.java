@@ -24,7 +24,7 @@ public class VendaService {
 
 
     @Transactional
-    public Venda saveVenda(byte[] bytes, String whatsapp, String facebook, String produtos, Endereco endereco, String contato) {
+    public Venda saveVenda(byte[] bytes, String whatsapp, String facebook, String produtos, Endereco endereco) {
 
         Comprovante comprovante = new Comprovante();
         comprovante.setFile(DatatypeConverter.parseBase64Binary(DatatypeConverter.printBase64Binary(bytes)));
@@ -37,7 +37,7 @@ public class VendaService {
         venda.setWhatsapp(whatsapp);
         venda.setProdutos(produtos);
         venda.setData(new Date());
-        venda.setCliente(contato);
+        venda.setCliente(whatsapp.trim().isEmpty() ? facebook : whatsapp);
 
 
      //   comprovanteRepository.save(comprovante);

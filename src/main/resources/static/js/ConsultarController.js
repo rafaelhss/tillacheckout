@@ -24,7 +24,7 @@ console.log('(localStorage.getItem("compras"):' + (localStorage.getItem("compras
   */
 
     $scope.buscarCompras = function(cliente){
-        $http.get(TillaConfig.adminUrl + "/vendas")
+        $http.get(TillaConfig.apiUrl + "/" + cliente + "/vendas")
         .then(function (response){
             $scope.vendas = response.data;
             $scope.url = TillaConfig.adminUrl;
