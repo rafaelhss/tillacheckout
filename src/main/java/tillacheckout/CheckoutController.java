@@ -53,10 +53,13 @@ public class CheckoutController {
 
     @PostMapping("/api/{user}/vendas")
     @ResponseStatus(HttpStatus.CREATED)
-    public @ResponseBody Venda registrarVenda(@RequestParam("file") MultipartFile file, @RequestParam("whatsapp") String whatsapp,
+    public @ResponseBody Venda registrarVenda(@RequestParam("file") MultipartFile file,
+                                              @RequestParam("whatsapp") String whatsapp,
                                               @RequestParam("facebook") String facebook,
                                               @RequestParam("produtos") String produtos,
-                                              @RequestParam("endereco") String enderecoStr){
+                                              @RequestParam("endereco") String enderecoStr,
+                                              @RequestParam("nome") String nome,
+                                              @RequestParam("email") String email){
 
         Gson gson = new GsonBuilder()
                 .registerTypeAdapter(Endereco.class, new EnderecoDeserializer())
@@ -68,7 +71,7 @@ public class CheckoutController {
             try {
                 byte[] bytes = file.getBytes();
 
-                return vendaService.saveVenda(bytes, whatsapp, facebook, produtos, endereco);
+                return vendaService.saveVenda(bytes, whatsapp, facebook, produtos, endereco, email, nome);
 
             } catch (Exception e) {
                 throw new RuntimeException("You failed to upload  => " + e.getMessage());
@@ -78,12 +81,12 @@ public class CheckoutController {
         }
     }
 
-    @RequestMapping(method = RequestMethod.GET, value="/api/{user}/vendas")
+    @RequestMapping(method = RequestMethod.GET, value="/api/{contato}/vendas")
     @ResponseStatus(HttpStatus.CREATED)
     public @ResponseBody
-    List<Venda> listarVendasUsuario(@PathVariable("user") String user){
-        System.out.println("user:" + user);
-        return vendaRepository.findByCliente(user);
+    List<Venda> listarVendasUsuario(@PathVariable("contato") String contato){
+        System.out.println("contato:" + contato);
+        return vendaRepository.findByContato(contato);
     }
 
 

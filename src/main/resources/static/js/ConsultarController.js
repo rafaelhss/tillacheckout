@@ -8,20 +8,17 @@ app.controller("ConsultarController", function ($scope, $http, $location, TillaC
     var whatsapp = localStorage.getItem("whatsapp");
     var facebook = localStorage.getItem("facebook");
 
+    $scope.cliente = undefined;
     if(facebook){
         $scope.cliente = facebook;
     }
     if(whatsapp){
         $scope.cliente = whatsapp;
     }
-/*
-console.log('(localStorage.getItem("compras"):' + (localStorage.getItem("compras")));
-
-    if(localStorage.getItem("compras")) {
-        $scope.vendas = JSON.parse(localStorage.getItem("compras"));
+    if($location.search().cliente){
+        $scope.cliente = $location.search().cliente;
     }
 
-  */
 
     $scope.buscarCompras = function(cliente){
         $http.get(TillaConfig.apiUrl + "/" + cliente + "/vendas")
@@ -29,14 +26,20 @@ console.log('(localStorage.getItem("compras"):' + (localStorage.getItem("compras
             $scope.vendas = response.data;
             $scope.url = TillaConfig.adminUrl;
             //localStorage.setItem("compras", JSON.stringify(response.data));
+            $scope.mostrarForm = false;
         },function (response){
             console.log('Erro ao buscar vendas');
             console.log(response.status);
         });
-
     }
 
-    $scope.buscarCompras($scope.cliente);
+    console.log($scope.cliente);
+    if($scope.cliente === undefined) {
+        $scope.mostrarForm = true;
+    }
+    else{
+        $scope.buscarCompras($scope.cliente);
+    }
 
 
 /*

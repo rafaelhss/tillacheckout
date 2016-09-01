@@ -45,17 +45,26 @@
                  <table class="table table-striped">
                      <thead>
                      <tr>
+                         <td>nome</td>
+                         <td>email</td>
                          <th>Contato</th>
                          <th>Produtos</th>
                          <th>Data</th>
                          <th>Comprovante</th>
                          <th>Estado</th>
+                         <th>Comprovante Correio</th>
                      </tr>
                      </thead>
                      <tbody>
 
 
                      <tr ng-repeat="venda in vendas">
+                         <td>
+                             {{venda.nome}}
+                         </td>
+                         <td>
+                             {{venda.email}}
+                         </td>
                          <td>
                              <i class="fa" ng-class="venda.whatsapp != 'null' ? 'fa-whatsapp' : 'fa-facebook-square'"></i>
                              <span>{{venda.whatsapp != 'null' ? venda.whatsapp : venda.facebook}}</span>
@@ -64,15 +73,29 @@
                          <td>{{ venda.data | date : "d/M/yyyy h:mm a" }}</td>
                          <td><a ng-href="{{url}}/vendas/{{venda.codigo}}/comprovantes/image">comprovante</a> </td>
                          <td>
-                             <div ng-hide="venda.comprovantePac">
+                             <div>
+                                 <span>[{{venda.vendaStatus}}]</span>
+                                 <span ng-click="backwardStatus(venda.codigo)" class="btn btn-info">
+                                    <i class="fa fa-step-backward fa-2x" aria-hidden="true"></i>
+                                 </span>
+                                 <span ng-click="forwardStatus(venda.codigo)" class="btn btn-info">
+                                    <i class="fa fa-step-forward fa-2x" aria-hidden="true"></i>
+                                 </span>
+                                 <div ng-show="uploading" class="big-icon">
+                                     <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+                                 </div>
+                             </div>
+                         </td>
+                         <td>
+                             <div>
                                  <div ng-hide="$parent.file" >
                                      <label for="upload">
-                                         <span  type="button" class="btn btn-warning btn-lg"><i class="fa fa-file-image-o" aria-hidden="true"></i>Escolher Comprovante Pac</span>
+                                         <span  type="button" class="btn btn-warning btn-lg"><i class="fa fa-file-image-o" aria-hidden="true"></i></span>
                                          <input type="file"  id="upload" style="display:none" file-model="$parent.file"/>
                                      </label>
                                  </div>
                                  <div ng-show="$parent.file" >
-                                     <span type="button"  ng-click="uploadFile3(venda.codigo)" class="btn btn-success btn-lg"><i class="fa fa-paper-plane" aria-hidden="true"></i> Enviar Comprovante PAC</span>
+                                     <span type="button"  ng-click="uploadFile3(venda.codigo)" class="btn btn-success"><i class="fa fa-paper-plane" aria-hidden="true"></i></span>
                                  </div>
                              </div>
                              <div ng-show="venda.comprovantePac">

@@ -41,9 +41,13 @@ public class Venda {
     private ComprovantePac comprovantePac;
 
     private Date data;
+    private String nome;
+    private String contato;
+    private String email;
 
+    @Enumerated(EnumType.STRING)
+    private VendaStatus vendaStatus;
 
-    private String cliente;
 
 }
 

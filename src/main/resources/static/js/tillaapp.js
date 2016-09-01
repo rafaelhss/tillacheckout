@@ -5,8 +5,8 @@ app.service('TillaConfig',function(){
     this.apiUrl = "http://tillacheckout.herokuapp.com/api";
     this.adminUrl = "http://tillacheckout.herokuapp.com/admin";
 
-    //this.apiUrl = "http://localhost:8080/api";
-    //this.adminUrl = "http://localhost:8080/admin";
+    this.apiUrl = "http://localhost:8080/api";
+    this.adminUrl = "http://localhost:8080/admin";
 });
 
 
@@ -34,7 +34,7 @@ app.directive('selectOnClick', ['$window', function ($window) {
 app.config(function($routeProvider, $locationProvider) {
     $routeProvider
         .when('/whatsapp', {
-            templateUrl: 'html/whatsapp.html',
+            templateUrl: 'html/whats.html',
             controller: 'WhatsappController'
         })
         .when('/facebook', {
@@ -48,6 +48,10 @@ app.config(function($routeProvider, $locationProvider) {
         .when('/produtos', {
             templateUrl: 'html/produtos.html',
             controller: 'ProdutosController'
+        })
+        .when('/email', {
+            templateUrl: 'html/email.html',
+            controller: 'EmailController'
         })
         .when('/comprovante', {
             templateUrl: 'html/comprovante.html',

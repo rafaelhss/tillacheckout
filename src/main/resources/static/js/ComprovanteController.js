@@ -13,6 +13,9 @@
         $scope.facebook = localStorage.getItem("facebook");
         $scope.produtos = localStorage.getItem("produtos");
         $scope.endereco = JSON.parse(localStorage.getItem("endereco"));
+        $scope.email = localStorage.getItem("email");
+        $scope.nome = localStorage.getItem("nome");
+        $scope.contato = localStorage.getItem("contato");
 
 
 
@@ -29,6 +32,8 @@
                 fd.append('facebook', localStorage.getItem("facebook"));
                 fd.append('produtos', localStorage.getItem("produtos"));
                 fd.append('endereco', localStorage.getItem("endereco"));
+                fd.append('email', localStorage.getItem("email"));
+                fd.append('nome', localStorage.getItem("nome"));
 
                 console.log('file is ' );
                 console.dir(file);

@@ -12,10 +12,11 @@ app.controller("WhatsappController", function ($scope, $http, $location) {
             $scope.whatsappinvalido = false;
         }
     }
-    $scope.processar = function(whatsapp){
+    $scope.processar = function(whatsapp, nome){
         if(!$scope.whatsappinvalido) {
             localStorage.setItem("whatsapp", whatsapp);
-            localStorage.setItem("user", whatsapp);
+            localStorage.setItem("contato", whatsapp);
+            localStorage.setItem("nome", nome);
             localStorage.removeItem("facebook");
             $location.path('/cep');
         }

@@ -39,4 +39,28 @@ app.controller("VendasController", function ($scope, $http, $location, TillaConf
     }
 
 
+    var changeStatus = function(operacao, codigoVenda){
+
+        $http.get(TillaConfig.adminUrl + "/vendas/" + codigoVenda + "/" + operacao)
+            .then(function (response){
+                console.log("oiss");
+                $scope.vendas = response.data;
+                $scope.url = TillaConfig.adminUrl;
+            },function (response){
+                console.log('Erro ao buscar vendas');
+                console.log(response.status);
+            });
+    }
+
+    $scope.forwardStatus = function(codigoVenda){
+        console.log("oi");
+        changeStatus("forwardStatus", codigoVenda);
+    }
+    $scope.backwardStatus = function(codigoVenda){
+        changeStatus("backwardStatus", codigoVenda);
+    }
+
+
+
+
 });

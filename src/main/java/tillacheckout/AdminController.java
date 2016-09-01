@@ -13,6 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 import tillacheckout.venda.Venda;
 import tillacheckout.venda.VendaRepository;
 import tillacheckout.venda.VendaService;
+import tillacheckout.venda.VendaStatus;
 import tillacheckout.venda.comprovante.Comprovante;
 import tillacheckout.venda.comprovante.ComprovantePac;
 
@@ -56,7 +57,7 @@ public class AdminController {
 
         if(authentication.getPrincipal().equals(RAFA) || authentication.getPrincipal().equals(TILLA)) {
         */
-            return Lists.newArrayList(vendaRepository.findAllByOrderByComprovantePacAsc());
+            return Lists.newArrayList(vendaRepository.findAllByOrderByComprovantePacAscDataDesc());
        /* }
         else
         {
@@ -173,4 +174,18 @@ public class AdminController {
         }
         return null;
     }
+
+    @RequestMapping(method = RequestMethod.GET, value="/admin/vendas/{codigo}/forwardStatus")
+    @ResponseStatus(HttpStatus.OK)
+    public @ResponseBody List<Venda> forwardStatus(@PathVariable("codigo") Long codigo){
+        return vendaService.changeStatus(codigo, true);
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value="/admin/vendas/{codigo}/backwardStatus")
+    @ResponseStatus(HttpStatus.OK)
+    public @ResponseBody List<Venda> backwardStatus(@PathVariable("codigo") Long codigo){
+        return vendaService.changeStatus(codigo, false);
+    }
+
+
 }

@@ -15,7 +15,7 @@ app.controller("ProdutosController", function ($scope, $http, $location) {
     $scope.processar = function(produtos){
         if(!$scope.produtosinvalidos) {
             localStorage.setItem("produtos", produtos);
-            $location.path('/comprovante');
+            $location.path('/email');
         }
     }
 });
