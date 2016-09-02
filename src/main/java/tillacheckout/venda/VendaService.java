@@ -34,6 +34,10 @@ public class VendaService {
                 else {
                     if (v.getVendaStatus() == VendaStatus.PAGAMENTO_APROVADO)
                         v.setVendaStatus(VendaStatus.ENVIADO_CORREIOS);
+
+                    else {
+                        v.setVendaStatus(VendaStatus.PEDIDO_RECEBIDO);
+                    }
                 }
             }
             else {
