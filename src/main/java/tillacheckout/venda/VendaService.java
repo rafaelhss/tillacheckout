@@ -24,30 +24,23 @@ public class VendaService {
     private VendaRepository vendaRepository;
 
 
-    public List<Venda> changeStatus(Long codigo, boolean forward){
-        Venda v =  vendaRepository.findOne(codigo);
-        if(v != null) {
-            if(forward) {
+    public List<Venda> changeStatus(Long codigo, boolean forward) {
+        Venda v = vendaRepository.findOne(codigo);
+        if (v != null) {
+            if (forward) {
                 if (v.getVendaStatus() == VendaStatus.PEDIDO_RECEBIDO) {
                     v.setVendaStatus(VendaStatus.PAGAMENTO_APROVADO);
-                }
-                else {
-                    if (v.getVendaStatus() == VendaStatus.PAGAMENTO_APROVADO)
-                        v.setVendaStatus(VendaStatus.ENVIADO_CORREIOS);
-
-                    else {
-                        v.setVendaStatus(VendaStatus.PEDIDO_RECEBIDO);
-                    }
+                } else {
+                    v.setVendaStatus(VendaStatus.ENVIADO_CORREIOS);
                 }
             }
             else {
-                if(v.getVendaStatus() == VendaStatus.PAGAMENTO_APROVADO) {
-                    v.setVendaStatus(VendaStatus.PEDIDO_RECEBIDO);
-                }else if(v.getVendaStatus() == VendaStatus.ENVIADO_CORREIOS) {
+                if (v.getVendaStatus() == VendaStatus.ENVIADO_CORREIOS) {
                     v.setVendaStatus(VendaStatus.PAGAMENTO_APROVADO);
+                } else {
+                    v.setVendaStatus(VendaStatus.PEDIDO_RECEBIDO);
                 }
             }
-
             vendaRepository.save(v);
             return vendaRepository.findByContato(v.getContato());
         }
