@@ -38,7 +38,7 @@
                 console.log('file is ' );
                 console.dir(file);
                 var uploadUrl = TillaConfig.apiUrl +'/'
-                    + localStorage.getItem("user")
+                    + localStorage.getItem("contato")
                     + '/vendas';
                 console.log("uploadUrl:" + uploadUrl);
                 fileUpload.uploadFileToUrl(fd, uploadUrl, $scope);
