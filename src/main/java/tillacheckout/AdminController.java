@@ -2,9 +2,11 @@ package tillacheckout;
 
 
 import com.google.common.collect.Lists;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.core.io.InputStreamResource;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -21,10 +23,10 @@ import javax.imageio.IIOImage;
 import javax.imageio.ImageIO;
 import javax.imageio.ImageWriteParam;
 import javax.imageio.ImageWriter;
+import javax.servlet.http.HttpServletRequest;
 import javax.xml.bind.DatatypeConverter;
 import java.awt.image.BufferedImage;
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
+import java.io.*;
 import java.util.List;
 
 @SpringBootApplication
@@ -93,6 +95,27 @@ public class AdminController {
         return null;
     }
 
+    @RequestMapping(value="/admin/vendas/{codigo}/comprovantes/image", method = RequestMethod.GET, produces = MediaType.APPLICATION_OCTET_STREAM_VALUE)
+    public ResponseEntity getIsoFile(@PathVariable("codigo") Long id) throws FileNotFoundException {
+
+        Venda v =vendaRepository.findOne(id);
+        if(v != null) {
+
+            Comprovante p = v.getComprovante();
+            try {
+                ByteArrayInputStream fs = new ByteArrayInputStream(DatatypeConverter.parseBase64Binary(DatatypeConverter.printBase64Binary(p.getFile())));
+                InputStreamResource inputStreamResource = new InputStreamResource(fs);
+                HttpHeaders httpHeaders = new HttpHeaders();
+                httpHeaders.setContentLength((int) p.getFile().length);
+                return new ResponseEntity(inputStreamResource, httpHeaders, HttpStatus.OK);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            // }
+        }
+        return null;
+    }
+
     @RequestMapping(method = RequestMethod.GET, value="/admin/vendas/{codigo}/comprovantes-pac/image")
     @ResponseBody
     public ResponseEntity<InputStreamResource> getComprovantePac(@PathVariable("codigo") Long id){
@@ -156,17 +179,11 @@ public class AdminController {
                 writer.setOutput(ImageIO.createImageOutputStream(os));
                 writer.write(null, new IIOImage(originalImage, null, null), param);
                 writer.dispose();
-/*
+
                 return ResponseEntity.ok()
                         //.contentLength(fs.getLength())
                         .contentType(MediaType.IMAGE_JPEG)
                         .body(new InputStreamResource(new ByteArrayInputStream(os.toByteArray())));
-*/
-
-                return ResponseEntity.ok()
-                        //.contentLength(fs.getLength())
-                       // .contentType(MediaType.ALL)
-                        .body(new InputStreamResource(fs));
 
 
             } catch (Exception e) {
