@@ -165,7 +165,7 @@ public class AdminController {
 
                 return ResponseEntity.ok()
                         //.contentLength(fs.getLength())
-                        .contentType(MediaType.ALL)
+                       // .contentType(MediaType.ALL)
                         .body(new InputStreamResource(fs));
 
 
