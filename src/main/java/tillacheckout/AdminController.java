@@ -95,7 +95,7 @@ public class AdminController {
         return null;
     }
 
-    @RequestMapping(value="/admin/vendas/{codigo}/comprovantes/image", method = RequestMethod.GET, produces = MediaType.APPLICATION_OCTET_STREAM_VALUE)
+    @RequestMapping(value="/admin/vendas/{codigo}/comprovantes/image2", method = RequestMethod.GET, produces = MediaType.APPLICATION_OCTET_STREAM_VALUE)
     public ResponseEntity getIsoFile(@PathVariable("codigo") Long id) throws FileNotFoundException {
 
         Venda v =vendaRepository.findOne(id);
