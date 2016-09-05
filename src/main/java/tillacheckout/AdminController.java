@@ -96,12 +96,6 @@ public class AdminController {
     @RequestMapping(method = RequestMethod.GET, value="/admin/vendas/{codigo}/comprovantes-pac/image")
     @ResponseBody
     public ResponseEntity<InputStreamResource> getComprovantePac(@PathVariable("codigo") Long id){
-/*
-        if(SecurityContextHolder.getContext()
-                .getAuthentication().getPrincipal().equals(RAFA) ||
-                SecurityContextHolder.getContext()
-                .getAuthentication().getPrincipal().equals(TILLA)) {
-*/
         Venda v =vendaRepository.findOne(id);
         if(v != null) {
 
@@ -162,11 +156,18 @@ public class AdminController {
                 writer.setOutput(ImageIO.createImageOutputStream(os));
                 writer.write(null, new IIOImage(originalImage, null, null), param);
                 writer.dispose();
-
+/*
                 return ResponseEntity.ok()
                         //.contentLength(fs.getLength())
                         .contentType(MediaType.IMAGE_JPEG)
                         .body(new InputStreamResource(new ByteArrayInputStream(os.toByteArray())));
+*/
+
+                return ResponseEntity.ok()
+                        //.contentLength(fs.getLength())
+                        .contentType(MediaType.ALL)
+                        .body(new InputStreamResource(fs));
+
 
             } catch (Exception e) {
                 e.printStackTrace();
