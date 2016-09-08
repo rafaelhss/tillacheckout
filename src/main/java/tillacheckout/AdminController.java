@@ -23,7 +23,7 @@ import javax.imageio.IIOImage;
 import javax.imageio.ImageIO;
 import javax.imageio.ImageWriteParam;
 import javax.imageio.ImageWriter;
-import javax.servlet.http.HttpServletRequest;
+import javax.ws.rs.QueryParam;
 import javax.xml.bind.DatatypeConverter;
 import java.awt.image.BufferedImage;
 import java.io.*;
@@ -50,22 +50,14 @@ public class AdminController {
     }
 
     @RequestMapping("/admin/vendas")
-    public List<Venda> getVendas() {
-/*
-        Authentication authentication = SecurityContextHolder.getContext()
-                .getAuthentication();
-
-        System.out.println("authentication.getPrincipal(): " + authentication.getPrincipal());
-
-        if(authentication.getPrincipal().equals(RAFA) || authentication.getPrincipal().equals(TILLA)) {
-        */
-            return Lists.newArrayList(vendaRepository.findAllByOrderByComprovantePacAscDataDesc());
-       /* }
-        else
-        {
-            return null;
-        }*/
+    public List<Venda> getVendas(@RequestParam(name = "status", required = false) VendaStatus vendaStatus) {
+        if(vendaStatus != null){
+            return Lists.newArrayList(vendaRepository.findByVendaStatusOrderByDataDesc(vendaStatus));
+        }
+        return Lists.newArrayList(vendaRepository.findAllByOrderByDataDesc());
     }
+
+
     @PostMapping(value="/admin/vendas/{codigo}/comprovantes-pac/")
     @ResponseStatus(HttpStatus.CREATED)
     public @ResponseBody Venda uploadPicture2(@RequestParam("file") MultipartFile file,

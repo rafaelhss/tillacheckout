@@ -9,5 +9,6 @@ import java.util.List;
  */
 public interface VendaRepository extends CrudRepository<Venda, Long> {
     List<Venda> findByContato(String contato);
-    List<Venda> findAllByOrderByComprovantePacAscDataDesc();
+    List<Venda> findAllByOrderByDataDesc();
+    List<Venda> findByVendaStatusOrderByDataDesc(VendaStatus vendaStatus);
 }

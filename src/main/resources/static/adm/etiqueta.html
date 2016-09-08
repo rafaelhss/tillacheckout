@@ -24,92 +24,59 @@
     <script src="../js/Upload.js"></script>
     <script src="js/EtiquetaController.js"></script>
 
-    <link rel="stylesheet" href="../style.css">
+
 
     <title>Tilla Checkout</title>
 
+    <style>
+        h1, h2, h3, h4, h5, h6{
+            line-height: 15px;
+        }
+        table {
+            border-spacing: 30px;
+            border-collapse: separate;
+        }
+    </style>
 </head>
 
 <body ng-controller="tillaCtrl">
     <div class="container" ng-controller="EtiquetaController">
 
-        <div class="jumbotron logo">
-            <h1>Tilla Viana</h1>
-            <h2 class="fancy"><span>Checkout</span></h2>
-        </div>
+        <h1>Vendas com status=PAGAMENTO_APROVADO</h1>
 
-        
-         <div class="row session">
-             <div class="col-md-6 col-md-padding-3">
-
-                 <table class="table table-striped">
+                 <table ng-repeat="venda in vendas" style="line-height: 1px;">
                      <thead>
                      <tr>
-                         <th>nome</th>
-                         <th>email</th>
-                         <th>Contato</th>
-                         <th>Produtos</th>
-                         <th>Data</th>
-                         <th>Comprovante</th>
-                         <th>Estado</th>
-                         <th>Comprovante Correio</th>
+                         <th><h2>Destinatario:</h2></th>
+                         <th><h2>Remetente:</h2></th>
+                         <th><h2>Produtos:</h2></th>
                      </tr>
                      </thead>
                      <tbody>
                      <tr>
-                         <td>
-                             {{venda.nome}}
+                         <td style="border: 2px dashed; padding: 20px;">
+                            <h2><span>{{venda.nome}}</span></h2>
+                            <h2><span>{{venda.endereco.logradouro}}</span><span> n.{{venda.endereco.numero}}</span> </h2>
+                            <h2><span ng-show="venda.endereco.ap">Compl: {{venda.endereco.ap}}</span></h2>
+                            <h2><span>Bairro: {{venda.endereco.bairro}}</span></h2>
+                            <h2><span>{{venda.endereco.cidade}} - {{venda.endereco.estado}}</span></h2>
+                            <h2><span>CEP: {{venda.endereco.cep}}</span></h2>
+                         </td>
+                         <td style="border: 2px dashed; padding: 20px;">
+                             <h2><span>Tilla Viana</span></h2>
+                             <h2><span>SQN 214 Bloco F</span></h2>
+                             <h2><span>ap 116</span></h2>
+                             <h2><span>Asa Norte</span></h2>
+                             <h2><span>Brasilia - DF</span></h2>
+                             <h2><span>CEP: 70873-060</span></h2>
                          </td>
                          <td>
-                             {{venda.email}}
-                         </td>
-                         <td>
-                             <i class="fa" ng-class="venda.whatsapp != 'null' ? 'fa-whatsapp' : 'fa-facebook-square'"></i>
-                             <span>{{venda.whatsapp != 'null' ? venda.whatsapp : venda.facebook}}</span>
-                         </td>
-                         <td>{{venda.produtos}}</td>
-                         <td>{{ venda.data | date : "d/M/yyyy h:mm a" }}</td>
-                         <td><a ng-href="{{url}}/vendas/{{venda.codigo}}/comprovantes/image">comprovante</a> </td>
-                         <td>
-                             <div>
-                                 <span>[{{venda.vendaStatus}}]</span>
-                                 <span ng-click="backwardStatus(venda.codigo)" class="btn btn-info">
-                                    <i class="fa fa-step-backward fa-2x" aria-hidden="true"></i>
-                                 </span>
-                                 <span ng-click="forwardStatus(venda.codigo)" class="btn btn-info">
-                                    <i class="fa fa-step-forward fa-2x" aria-hidden="true"></i>
-                                 </span>
-                                 <div ng-show="uploading" class="big-icon">
-                                     <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
-                                 </div>
-                             </div>
-                         </td>
-                         <td>
-                             <div>
-                                 <div ng-hide="$parent.file" >
-                                     <label for="upload">
-                                         <span  type="button" class="btn btn-warning btn-lg"><i class="fa fa-file-image-o" aria-hidden="true"></i></span>
-                                         <input type="file"  id="upload" style="display:none" file-model="$parent.file"  ng-click="fileClicked = venda.codigo" />
-                                     </label>
-                                 </div>
-                                 <div ng-show="$parent.file  && fileClicked == venda.codigo" >
-                                     <span type="button"  ng-click="uploadFile3(venda.codigo)" class="btn btn-success"><i class="fa fa-paper-plane" aria-hidden="true"></i></span>
-                                 </div>
-                             </div>
-                             <div ng-show="venda.comprovantePac">
-                                 <a ng-href="{{url}}/vendas/{{venda.codigo}}/comprovantes-pac/image">comprovante PAC</a>
-                             </div>
-                         <div ng-show="uploading" class="big-icon" >
-                             <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
-                         </div>
+                             <h4>{{venda.produtos}}</h4>
                          </td>
                      </tr>
                      </tbody>
                  </table>
              </div>
-
-         </div>
-    </div>
 
 
 </body>

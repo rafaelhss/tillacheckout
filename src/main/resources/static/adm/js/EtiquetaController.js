@@ -3,19 +3,14 @@
  */
 
 
-app.controller("EtiquetaController", function ($scope, $http, $location, TillaConfig) {
+app.controller("EtiquetaController", function ($scope, $http, TillaConfig) {
 
 
-    var codigoVenda = $location.search().codigoVenda;
-
-    if (codigoVenda != undefined) {
-
-        $http.get(TillaConfig.adminUrl + "/vendas/" + $scope.codigoVenda)
+        $http.get(TillaConfig.adminUrl + "/vendas?status=PAGAMENTO_APROVADO")
             .then(function (response) {
-                $scope.venda = response.data;
+                $scope.vendas = response.data;
             }, function (response) {
                 console.log('Erro ao buscar vendas');
                 console.log(response.status);
             });
-    }
 });
