@@ -42,7 +42,7 @@ function carregaParametrosDoLocalStorage($scope) {
     $scope.contato = localStorage.getItem("contato");
 }
 
-function bindFiletoImage(){
+function bindFiletoImage($scope){
     document.getElementById("upload").onchange = function () {
         var reader = new FileReader();
 
@@ -56,13 +56,14 @@ function bindFiletoImage(){
 
             var quality =  5;
             var output_format = 'jpg';
-try {
-    target_img.src = jic.compress(source_img, quality, output_format).src;
-    //this.files[0].target.result = target_img.src;
-}
-catch(err) {
-    $scope.erro = "erro ao comprimir: " + err;
-}        };
+            try {
+                target_img.src = jic.compress(source_img, quality, output_format).src;
+                //this.files[0].target.result = target_img.src;
+            }
+            catch(err) {
+                $scope.erro = "erro ao comprimir: " + err;
+            }
+        };
 
         // read the image file as a data URL.
         reader.readAsDataURL(this.files[0]);
@@ -113,7 +114,7 @@ function upload(file, $scope, $http, TillaConfig){
     function($scope, $http, fileUpload, fileCompress, ngDialog,$location,  TillaConfig){
         carregaParametrosDoLocalStorage($scope);
 
-        bindFiletoImage();
+        bindFiletoImage($scope);
 
         $scope.uploadFile = function(){
             console.log("myfile:");
