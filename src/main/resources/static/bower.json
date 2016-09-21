@@ -22,6 +22,7 @@
     "jquery": "^3.1.0",
     "angular-xml": "^2.2.1",
     "angular-route": "^1.5.8",
-    "ng-dialog": "^0.6.4"
+    "ng-dialog": "^0.6.4",
+    "JIC": "^2.0.2"
   }
 }

@@ -11,7 +11,12 @@ app.service('TillaConfig',function(){
 
 
 app.controller("tillaCtrl", function ($scope, $http) {
-
+try{
+    var teste = localStorage.getItem("teste");
+}
+catch(err) {
+    $scope.erro = "Parece que voce esta no modo anonimo do navegador. Use o modo normal para continuar."
+}
 
 });
 
@@ -54,7 +59,7 @@ app.config(function($routeProvider, $locationProvider) {
             controller: 'EmailController'
         })
         .when('/comprovante', {
-            templateUrl: 'html/comprovante.html',
+            templateUrl: 'html/comprovante2.html',
             controller: 'ComprovanteController'
         })
         .when('/login', {

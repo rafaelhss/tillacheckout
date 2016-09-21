@@ -1,4 +1,10 @@
 <div class="col-md-6 col-md-padding-3">
+    <div class="alert alert-danger" ng-show="erro">
+        <strong>Ooops!</strong> Deu alguma coisa errada...  [Erro:{{erro}}]
+        <span class="close"  ng-click="erro = undefined"><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+    </div>
+
+
     <h3>Quero informar meu endereço pois já comprei</h3>
     <p><a type="button" href="#/whatsapp" class="btn btn-default btn-lg"><i class="fa fa-whatsapp"></i> <span>Pelo Whatsapp</span></a></p>
     <p><a type="button" href="#/facebook" class="btn btn-default btn-lg"><i class="fa fa-facebook-square"></i> <span>Pelo Face/Messenger</span></a></p>
