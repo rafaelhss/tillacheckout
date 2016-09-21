@@ -125,7 +125,7 @@ function upload(file, $scope, $http, TillaConfig){
                     .then(function(file){
                         upload(file, $scope, $http, TillaConfig);
                     })*/
-                upload(srcToFile2(target_img.src, 'logo.png', 'image/png'), $scope, $http, TillaConfig);
+                upload($scope.myFile, $scope, $http, TillaConfig);
 
             } else {
                 $scope.erro = "Escolha uma imagem como comprovante (voce escolheu pdf?). Dica: tire print ou foto do comprovante e envie."
