@@ -12,7 +12,7 @@ app.service('TillaConfig',function(){
 
 app.controller("tillaCtrl", function ($scope, $http) {
 try{
-    var teste = localStorage.getItem("teste");
+    var teste = localStorage.settItem("teste", "");
 }
 catch(err) {
     $scope.erro = "Parece que voce esta no modo anonimo do navegador. Use o modo normal para continuar."
