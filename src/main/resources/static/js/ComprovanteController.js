@@ -5,6 +5,25 @@
  */
 
 
+function srcToFile2(src, fileName, mimeType){
+
+    var byteString = atob(src.split(',')[1]);
+    var ab = new ArrayBuffer(byteString.length);
+    var ia = new Uint8Array(ab);
+    for (var i = 0; i < byteString.length; i++) {
+        ia[i] = byteString.charCodeAt(i);
+    }
+    var blob = new Blob([ia], {
+        type: mimeType
+    });
+    var file = new File([blob], mimeType);
+
+
+    return file;
+
+
+}
+
 function srcToFile(src, fileName, mimeType){
     //TODO: so se for imagem.. cuidado com pdf
     return (fetch(src)
@@ -98,10 +117,12 @@ function upload(file, $scope, $http, TillaConfig){
             console.log($scope.myFile);
             if($scope.myFile.type == 'image/jpeg' || $scope.myFile.type == 'image/png' ) {
                 var target_img = document.getElementById("imagec");
-                srcToFile(target_img.src, 'logo.png', 'image/png')
+                /*srcToFile(target_img.src, 'logo.png', 'image/png')
                     .then(function(file){
                         upload(file, $scope, $http, TillaConfig);
-                    })
+                    })*/
+                upload(srcToFile2(target_img.src, 'logo.png', 'image/png'), $scope, $http, TillaConfig);
+
             } else {
                 $scope.erro = "Escolha uma imagem como comprovante (voce escolheu pdf?). Dica: tire print ou foto do comprovante e envie."
                 $scope.myFile = undefined;

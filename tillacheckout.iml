@@ -63,7 +63,7 @@
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.21" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:jcl-over-slf4j:1.7.21" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aspects:4.3.2.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: postgresql:postgresql:9.0-801.jdbc4" level="project" />
+    <orderEntry type="library" name="Maven: com.h2database:h2:1.4.192" level="project" />
     <orderEntry type="library" name="Maven: org.glassfish.jersey.core:jersey-client:2.10" level="project" />
     <orderEntry type="library" name="Maven: org.glassfish.jersey.core:jersey-common:2.10" level="project" />
     <orderEntry type="library" name="Maven: javax.annotation:javax.annotation-api:1.2" level="project" />
