@@ -63,6 +63,32 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="etiqueta.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/adm/etiqueta.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.888889">
+              <caret line="58" column="52" selection-start-line="58" selection-start-column="52" selection-end-line="58" selection-end-column="52" />
+              <folding>
+                <element signature="n#style#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EtiquetaController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/adm/js/EtiquetaController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Upload.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/Upload.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -110,7 +136,6 @@
         <option value="$PROJECT_DIR$/html/email.html" />
         <option value="$PROJECT_DIR$/html/comprovante.html" />
         <option value="$PROJECT_DIR$/adm/js/EtiquetaController.js" />
-        <option value="$PROJECT_DIR$/adm/etiqueta.html" />
         <option value="$PROJECT_DIR$/js/Upload2.js" />
         <option value="$PROJECT_DIR$/js/EmailController.js" />
         <option value="$PROJECT_DIR$/js/WhatsappController.js" />
@@ -122,6 +147,7 @@
         <option value="$PROJECT_DIR$/js/Upload.js" />
         <option value="$PROJECT_DIR$/js/VendasController.js" />
         <option value="$PROJECT_DIR$/adm/relatorio.html" />
+        <option value="$PROJECT_DIR$/adm/etiqueta.html" />
         <option value="$PROJECT_DIR$/js/tillaapp.js" />
       </list>
     </option>
@@ -613,20 +639,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/adm/js/EtiquetaController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.71276593">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adm/etiqueta.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/WhatsappController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.47340426">
@@ -761,6 +773,28 @@
           <caret line="92" column="108" selection-start-line="92" selection-start-column="108" selection-end-line="92" selection-end-column="108" />
           <folding>
             <element signature="n#style#0;n#input#0;n#label#0;n#div#0;n#div#0;n#td#8;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adm/js/EtiquetaController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adm/etiqueta.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.888889">
+          <caret line="58" column="52" selection-start-line="58" selection-start-column="52" selection-end-line="58" selection-end-column="52" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
