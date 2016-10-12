@@ -38,13 +38,13 @@
             <h2 class="fancy"><span>Checkout</span></h2>
         </div>
 
-        
          <div class="row session">
              <div class="col-md-6 col-md-padding-3">
 
                  <table class="table table-striped">
                      <thead>
                      <tr>
+                         <th>Codigo</th>
                          <th>nome</th>
                          <th>email</th>
                          <th>Contato</th>
@@ -75,6 +75,9 @@
 
                      <tr ng-repeat="venda in vendas | filter:filtro.vendaStatus ">
                          <td>
+                             <h3>{{venda.codigo}}</h3>
+                         </td>
+                         <td>
                              {{venda.nome}}
                          </td>
                          <td>
@@ -86,7 +89,10 @@
                          </td>
                          <td>{{venda.produtos}}</td>
                          <td>{{ venda.data | date : "d/M/yyyy h:mm a" }}</td>
-                         <td><a ng-href="{{url}}/vendas/{{venda.codigo}}/comprovantes/image">comprovante</a> </td>
+                         <td><a ng-href="{{url}}/vendas/{{venda.codigo}}/comprovantes/image">
+                             <img ng-src="{{url}}/vendas/{{venda.codigo}}/comprovantes/image" height="100px;"/>
+                            </a>
+                         </td>
                          <td>
                              <div>
                                  <span>[{{venda.vendaStatus}}]</span>
@@ -96,32 +102,38 @@
                                  <span ng-click="forwardStatus(venda.codigo)" class="btn btn-info">
                                     <i class="fa fa-step-forward fa-2x" aria-hidden="true"></i>
                                  </span>
-                                 <div ng-show="uploading" class="big-icon">
+                                 <div ng-show="changingStatus" class="big-icon">
                                      <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
                                  </div>
                              </div>
                          </td>
                          <td>
+
                              <div>
                                  <div ng-hide="$parent.file" >
-                                     <label for="upload">
-                                         <span  type="button" class="btn btn-warning btn-lg"><i class="fa fa-file-image-o" aria-hidden="true"></i></span>
-                                         <input type="file"  id="upload" style="display:none" file-model="$parent.file"  ng-click="fileClicked = venda.codigo" />
+                                     <a ng-if="venda.comprovantePac" ng-href="{{url}}/vendas/{{venda.codigo}}/comprovantes-pac/image/?r={{imgChanged}}">
+                                         <img ng-src="{{url}}/vendas/{{venda.codigo}}/comprovantes-pac/image/?r={{imgChanged}}" height="100px"/>
+                                     </a>
+                                     <label for="upload{{venda.codigo}}">
+                                         <span  type="button" class="btn " ng-class="!venda.comprovantePac ? 'btn-lg btn-warning' : 'btn-sm btn-default'">
+                                             <i ng-class="venda.comprovantePac ? 'fa fa-refresh' : 'fa fa-file-image-o'"></i>
+                                         </span>
+                                         <input type="file"  id="upload{{venda.codigo}}"
+                                                style="display:none" file-model="$parent.file"  ng-click="fileClick(venda.codigo)"/>
                                      </label>
                                  </div>
                                  <div ng-show="$parent.file  && fileClicked == venda.codigo" >
-                                     <span type="button"  ng-click="uploadFile3(venda.codigo)" class="btn btn-success"><i class="fa fa-paper-plane" aria-hidden="true"></i></span>
+                                     <span type="button"  ng-click="uploadFile3(venda, $index)" class="btn btn-success"><i class="fa fa-paper-plane" aria-hidden="true"></i></span>
                                  </div>
+
                              </div>
-                             <div ng-show="venda.comprovantePac">
-                                 <a ng-href="{{url}}/vendas/{{venda.codigo}}/comprovantes-pac/image">comprovante PAC</a>
+
+                             <div ng-show="uploading && fileClicked == venda.codigo" class="big-icon" >
+                                 <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
                              </div>
-                         <div ng-show="uploading" class="big-icon" >
-                             <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
-                         </div>
                          </td>
                          <td>
-                             {{venda.endereco}}
+                             {{venda.endereco.cidade}}
                          </td>
                      </tr>
                      </tbody>

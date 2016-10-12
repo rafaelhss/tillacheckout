@@ -34,5 +34,25 @@ angular.module("tillaApp").directive('imgModel', ['$parse', function ($parse) {
 angular.module("tillaApp").service('fileUpload', ['$http', function ($http) {
     this.uploadFileToUrl = function(fd, uploadUrl, $scope){
 
-        }
+        console.log("uploadUrl:" + uploadUrl);
+        //fileUpload.uploadFileToUrl(fd, uploadUrl, $scope);
+        $scope.uploading = true;
+        $http.post(uploadUrl, fd, {
+            transformRequest: angular.identity,
+            headers: {'Content-Type': undefined}
+        })
+            .then(function(response){
+                console.log("foi");
+                $scope.vendaConcluida = response.data;
+                $scope.uploading = false;
+            },function(response){
+                $scope.uploading = false;
+                console.log("NAO foi:");
+                console.log(response);
+                $scope.erro = response.status + ' ' + response.statusText + "(Erro no servidor ou na conexao)";
+            });
+
+        $scope.myFile = undefined;
+
+    }
 }]);

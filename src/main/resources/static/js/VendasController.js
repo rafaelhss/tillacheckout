@@ -2,8 +2,15 @@
  * Created by rafa on 27/08/2016.
  */
 
-
 app.controller("VendasController", function ($scope, $http, $location, TillaConfig, fileUpload) {
+
+    $scope.imgChanged = Math.random();// gambiarra pra recarregar a imagem quando upload
+
+    $scope.fileClick = function (venda){
+        console.log('fileClick:' + venda);
+        $scope.fileClicked = venda;
+    }
+
 
     $http.get(TillaConfig.adminUrl + "/vendas")
         .then(function (response){
@@ -15,7 +22,8 @@ app.controller("VendasController", function ($scope, $http, $location, TillaConf
         });
 
 
-    $scope.uploadFile3 = function(codigo){
+    $scope.uploadFile3 = function(venda, index){
+        var codigo = venda.codigo;
         var file = $scope.file;
 
 
@@ -31,24 +39,31 @@ app.controller("VendasController", function ($scope, $http, $location, TillaConf
 
         console.log("uploadUrl:" + uploadUrl);
         fileUpload.uploadFileToUrl(fd, uploadUrl, $scope);
-        $scope.myFile = undefined;
+        $scope.file = undefined;
+        $scope.imgChanged = Math.random();
+
+        if($scope.vendas[index].comprovantePac == null) {
+            $scope.vendas[index].comprovantePac = true;
+        }
+
     };
 
-    $scope.fileSet = function(){
-        return $scope.myFile != undefined;
-    }
+
 
 
     var changeStatus = function(operacao, codigoVenda){
 
+        $scope.changingStatus = true;
         $http.get(TillaConfig.adminUrl + "/vendas/" + codigoVenda + "/" + operacao)
             .then(function (response){
                 console.log("oiss");
                 $scope.vendas = response.data;
                 $scope.url = TillaConfig.adminUrl;
+                $scope.changingStatus = false;
             },function (response){
                 console.log('Erro ao buscar vendas');
                 console.log(response.status);
+                $scope.changingStatus = false;
             });
     }
 
