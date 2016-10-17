@@ -88,7 +88,4 @@ public class CheckoutController {
         System.out.println("contato:" + contato);
         return vendaRepository.findByContato(contato);
     }
-
-
-
 }

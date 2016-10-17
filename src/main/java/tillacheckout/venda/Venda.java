@@ -34,10 +34,10 @@ public class Venda {
     private Endereco endereco;
 
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Comprovante comprovante;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private ComprovantePac comprovantePac;
 
     private Date data;
