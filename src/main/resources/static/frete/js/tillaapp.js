@@ -4,7 +4,7 @@ var app = angular.module("tillaApp", []);
 
 var atualizaTexto = function(postdata, valortag, prazotag, $scope, $http){
     $scope.carregando = true;
-    $http.post("https://nocors.herokuapp.com/http://ws.correios.com.br/calculador/CalcPrecoPrazo.asmx/CalcPrecoPrazo", postdata, {
+    $http.post("https://cors-anywhere.herokuapp.com/http://ws.correios.com.br/calculador/CalcPrecoPrazo.asmx/CalcPrecoPrazo", postdata, {
             headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' }
         }
     ).success(function (data, status) {
