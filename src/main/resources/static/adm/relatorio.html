@@ -90,7 +90,8 @@
                          <td>{{venda.produtos}}</td>
                          <td>{{ venda.data | date : "d/M/yyyy h:mm a" }}</td>
                          <td><a ng-href="{{url}}/vendas/{{venda.codigo}}/comprovantes/image">
-                             <img ng-src="{{url}}/vendas/{{venda.codigo}}/comprovantes/image" height="100px;"/>
+                             <!--<img ng-src="{{url}}/vendas/{{venda.codigo}}/comprovantes/image" height="100px;"/>-->
+                             comprovante pagamento
                             </a>
                          </td>
                          <td>
@@ -112,7 +113,8 @@
                              <div>
                                  <div ng-hide="$parent.file" >
                                      <a ng-if="venda.comprovantePac" ng-href="{{url}}/vendas/{{venda.codigo}}/comprovantes-pac/image/?r={{imgChanged}}">
-                                         <img ng-src="{{url}}/vendas/{{venda.codigo}}/comprovantes-pac/image/?r={{imgChanged}}" height="100px"/>
+                                         <!--<img ng-src="{{url}}/vendas/{{venda.codigo}}/comprovantes-pac/image/?r={{imgChanged}}" height="100px"/>-->
+                                         comprovante correio
                                      </a>
                                      <label for="upload{{venda.codigo}}">
                                          <span  type="button" class="btn " ng-class="!venda.comprovantePac ? 'btn-lg btn-warning' : 'btn-sm btn-default'">
