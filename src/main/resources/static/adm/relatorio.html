@@ -97,10 +97,10 @@
                          <td>
                              <div>
                                  <span>[{{venda.vendaStatus}}]</span>
-                                 <span ng-click="backwardStatus(venda.codigo)" class="btn btn-info">
+                                 <span ng-click="backwardStatus(venda.codigo, $index)" class="btn btn-info">
                                     <i class="fa fa-step-backward fa-2x" aria-hidden="true"></i>
                                  </span>
-                                 <span ng-click="forwardStatus(venda.codigo)" class="btn btn-info">
+                                 <span ng-click="forwardStatus(venda.codigo, $index)" class="btn btn-info">
                                     <i class="fa fa-step-forward fa-2x" aria-hidden="true"></i>
                                  </span>
                                  <div ng-show="changingStatus" class="big-icon">

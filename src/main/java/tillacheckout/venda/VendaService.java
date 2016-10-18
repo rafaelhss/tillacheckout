@@ -24,7 +24,7 @@ public class VendaService {
     private VendaRepository vendaRepository;
 
 
-    public List<Venda> changeStatus(Long codigo, boolean forward) {
+    public Venda changeStatus(Long codigo, boolean forward) {
         Venda v = vendaRepository.findOne(codigo);
         if (v != null) {
             if (forward) {
@@ -43,8 +43,8 @@ public class VendaService {
                     v.setVendaStatus(VendaStatus.PEDIDO_RECEBIDO);
                 }
             }
-            vendaRepository.save(v);
-            return vendaRepository.findByContato(v.getContato());
+
+            return vendaRepository.save(v);
         }
         return null;
     }

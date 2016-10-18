@@ -51,13 +51,13 @@ app.controller("VendasController", function ($scope, $http, $location, TillaConf
 
 
 
-    var changeStatus = function(operacao, codigoVenda){
+    var changeStatus = function(operacao, codigoVenda, index){
 
         $scope.changingStatus = true;
         $http.get(TillaConfig.adminUrl + "/vendas/" + codigoVenda + "/" + operacao)
             .then(function (response){
                 console.log("oiss");
-                $scope.vendas = response.data;
+                $scope.vendas[index] = response.data;
                 $scope.url = TillaConfig.adminUrl;
                 $scope.changingStatus = false;
             },function (response){
@@ -67,12 +67,12 @@ app.controller("VendasController", function ($scope, $http, $location, TillaConf
             });
     }
 
-    $scope.forwardStatus = function(codigoVenda){
+    $scope.forwardStatus = function(codigoVenda, index){
         console.log("oi");
-        changeStatus("forwardStatus", codigoVenda);
+        changeStatus("forwardStatus", codigoVenda, index);
     }
-    $scope.backwardStatus = function(codigoVenda){
-        changeStatus("backwardStatus", codigoVenda);
+    $scope.backwardStatus = function(codigoVenda, index){
+        changeStatus("backwardStatus", codigoVenda, index);
     }
 
 

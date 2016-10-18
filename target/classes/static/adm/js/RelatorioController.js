@@ -39,12 +39,12 @@ app.controller("RelatorioController", function ($scope, $http, $location, TillaC
     }
 
 
-    var changeStatus = function(operacao, codigoVenda){
+    var changeStatus = function(operacao, codigoVenda, index){
 
         $http.get(TillaConfig.adminUrl + "/vendas/" + codigoVenda + "/" + operacao)
             .then(function (response){
                 console.log("oiss");
-                $scope.vendas = response.data;
+                $scope.vendas[index] = response.data;
                 $scope.url = TillaConfig.adminUrl;
             },function (response){
                 console.log('Erro ao buscar vendas');
@@ -52,12 +52,12 @@ app.controller("RelatorioController", function ($scope, $http, $location, TillaC
             });
     }
 
-    $scope.forwardStatus = function(codigoVenda){
+    $scope.forwardStatus = function(codigoVenda, index){
         console.log("oi");
-        changeStatus("forwardStatus", codigoVenda);
+        changeStatus("forwardStatus", codigoVenda, index);
     }
     $scope.backwardStatus = function(codigoVenda){
-        changeStatus("backwardStatus", codigoVenda);
+        changeStatus("backwardStatus", codigoVenda, index);
     }
 
 

@@ -190,13 +190,13 @@ public class AdminController {
 
     @RequestMapping(method = RequestMethod.GET, value="/admin/vendas/{codigo}/forwardStatus")
     @ResponseStatus(HttpStatus.OK)
-    public @ResponseBody List<Venda> forwardStatus(@PathVariable("codigo") Long codigo){
+    public @ResponseBody Venda forwardStatus(@PathVariable("codigo") Long codigo){
         return vendaService.changeStatus(codigo, true);
     }
 
     @RequestMapping(method = RequestMethod.GET, value="/admin/vendas/{codigo}/backwardStatus")
     @ResponseStatus(HttpStatus.OK)
-    public @ResponseBody List<Venda> backwardStatus(@PathVariable("codigo") Long codigo){
+    public @ResponseBody Venda backwardStatus(@PathVariable("codigo") Long codigo){
         return vendaService.changeStatus(codigo, false);
     }
 
