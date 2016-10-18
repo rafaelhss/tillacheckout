@@ -54,7 +54,10 @@ public class AdminController {
         if(vendaStatus != null){
             return Lists.newArrayList(vendaRepository.findByVendaStatusOrderByDataDesc(vendaStatus));
         }
-        return Lists.newArrayList(vendaRepository.findAllByOrderByDataDesc());
+
+        List<Venda> result = vendaRepository.findAllByOrderByDataDesc();
+
+        return Lists.newArrayList(result);
     }
 
 
