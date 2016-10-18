@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30db8fe7-f605-4804-875e-0944eed977e4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tillacheckout/CheckoutController.java" afterPath="$PROJECT_DIR$/src/main/java/tillacheckout/CheckoutController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tillacheckout/venda/Venda.java" afterPath="$PROJECT_DIR$/src/main/java/tillacheckout/venda/Venda.java" />
     </list>
     <ignored path="tillacheckout.iws" />
@@ -58,8 +57,8 @@
       <file leaf-file-name="Venda.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/tillacheckout/venda/Venda.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.587822">
-              <caret line="39" column="63" selection-start-line="39" selection-start-column="63" selection-end-line="39" selection-end-column="63" />
+            <state vertical-scroll-proportion="0.51053864">
+              <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -939,8 +938,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tillacheckout/venda/Venda.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.587822">
-          <caret line="39" column="63" selection-start-line="39" selection-start-column="63" selection-end-line="39" selection-end-column="63" />
+        <state vertical-scroll-proportion="0.51053864">
+          <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
           <folding />
         </state>
       </provider>
