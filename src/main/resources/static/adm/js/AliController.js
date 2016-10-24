@@ -5,6 +5,18 @@
 
 app.controller("AliController", function ($scope, $http, TillaConfig) {
 
+    $scope.deletar = function(compra, index){
+        $scope.carregando = true;
+        $http.delete(TillaConfig.adminUrl + "/compras/" + compra.id)
+            .then(function (response) {
+                $scope.compras.splice(index, 1);
+                $scope.carregando = false;
+            }, function (response) {
+                console.log('Erro ao deletar compras');
+                console.log(response.status);
+                $scope.carregando = false;
+            });
+    }
 
     $scope.alterar = function(compra, index) {
         $scope.carregando = true;
@@ -52,11 +64,17 @@ app.controller("AliController", function ($scope, $http, TillaConfig) {
 
 
                 objetos.forEach(function(objeto, index){
-                     $scope.compras[index].ultimostatus = objeto.evento["0"].descricao + "(" + objeto.evento["0"].data + ")";
+                    try {
+                        $scope.compras[index].ultimostatus = objeto.evento["0"].descricao + "(" + objeto.evento["0"].data + ")";
 
-                    if($scope.compras[index].rastreio.toLowerCase() != objeto.numero.toLowerCase()) {
-                        $scope.compras[index].ultimostatus += "  INCONSISTENTE[" + $scope.compras[index].rastreio.toLowerCase() + " - " + objeto.numero.toLowerCase();
+                        if ($scope.compras[index].rastreio.toLowerCase() != objeto.numero.toLowerCase()) {
+                            $scope.compras[index].ultimostatus += "  INCONSISTENTE[" + $scope.compras[index].rastreio.toLowerCase() + " - " + objeto.numero.toLowerCase();
+                        }
+                    } catch(exception){
+                        console.log(exception)
+                        $scope.compras[index].ultimostatus = "Erro " + objeto.erro;
                     }
+                    $scope.compras[index].ultimostatus = "[" + $scope.compras[index].rastreio + "] " + $scope.compras[index].ultimostatus
                     console.log($scope.compras[index].ultimostatus)
                 });
 

@@ -234,7 +234,15 @@ public class AdminController {
     public @ResponseBody Compra alterarStatusCompra(@PathVariable("id") Long id, @RequestBody Compra compra ){
         Compra c = compraRepository.findOne(id);
         c.setRecebida(compra.isRecebida());
-        return compraRepository.save(compra);
+        return compraRepository.save(c);
+    }
+
+    @CrossOrigin
+    @RequestMapping(method = RequestMethod.DELETE, value="/admin/compras/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public void deletarCompra(@PathVariable("id") Long id ){
+        Compra c = compraRepository.findOne(id);
+        compraRepository.delete(c);
     }
 
 }

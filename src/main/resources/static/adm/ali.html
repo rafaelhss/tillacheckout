@@ -70,10 +70,13 @@
                              <a ng-href="{{compra.rastreio}}">{{compra.ultimostatus}}</a>
                          </div>
                      </td>
-                     <td><button class="btn btn-default" ng-click="alterar(compra, $index)">
-                         <span ng-show="compra.recebida">desreceber</span>
-                         <span ng-show="!compra.recebida">Receber</span>
-                     </button></td>
+                     <td>
+                        <button class="btn btn-default" ng-click="alterar(compra, $index)">
+                            <span ng-show="compra.recebida">desreceber</span>
+                             <span ng-show="!compra.recebida">Receber</span>
+                        </button>
+                        <a ng-click="deletar(compra, $index)">deletar</a>
+                     </td>
                  </tr>
              </tbody>
          </table>
