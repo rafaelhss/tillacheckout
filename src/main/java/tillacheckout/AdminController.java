@@ -12,6 +12,8 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import tillacheckout.compras.Compra;
+import tillacheckout.compras.CompraRepository;
 import tillacheckout.venda.Venda;
 import tillacheckout.venda.VendaRepository;
 import tillacheckout.venda.VendaService;
@@ -39,6 +41,9 @@ public class AdminController {
 
     @Autowired
     private VendaService vendaService;
+
+    @Autowired
+    private CompraRepository compraRepository;
 
     @Autowired
     private VendaRepository vendaRepository;
@@ -200,5 +205,36 @@ public class AdminController {
         return vendaService.changeStatus(codigo, false);
     }
 
+
+
+    @CrossOrigin
+    @PostMapping("/admin/compras")
+    @ResponseStatus(HttpStatus.CREATED)
+    public @ResponseBody Compra registrarVenda(@RequestBody Compra compra){
+        return compraRepository.save(compra);
+    }
+
+    @CrossOrigin
+    @RequestMapping(method = RequestMethod.GET, value="/admin/compras")
+    @ResponseStatus(HttpStatus.OK)
+    public @ResponseBody List<Compra> listarCompras(@QueryParam("recebida") boolean recebida){
+        return compraRepository.findByRecebida(recebida);
+    }
+
+    @CrossOrigin
+    @RequestMapping(method = RequestMethod.GET, value="/admin/compras/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public @ResponseBody Compra buscarCompra(@PathVariable("id") Long id){
+        return compraRepository.findOne(id);
+    }
+
+    @CrossOrigin
+    @RequestMapping(method = RequestMethod.PUT, value="/admin/compras/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public @ResponseBody Compra alterarStatusCompra(@PathVariable("id") Long id, @RequestBody Compra compra ){
+        Compra c = compraRepository.findOne(id);
+        c.setRecebida(compra.isRecebida());
+        return compraRepository.save(compra);
+    }
 
 }
