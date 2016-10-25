@@ -65,13 +65,12 @@ app.controller("AliController", function ($scope, $http, TillaConfig) {
 
                 objetos.forEach(function(objeto, index){
                     try {
+                        var evento = objeto.evento.constructor === Array ? objeto.evento["0"]:objeto.evento;
 
-                        if(objeto.evento.constructor === Array) {
-                            $scope.compras[index].ultimostatus = objeto.evento["0"].descricao + "(" + objeto.evento["0"].data + ")";
-                        }
-                        else {
-                            $scope.compras[index].ultimostatus = objeto.evento.descricao + "(" + objeto.evento.data + ")";
-                        }
+                        $scope.compras[index].ultimostatus = evento.descricao
+                            + " (" + evento.destino.local
+                            + " - " + evento.destino.cidade
+                            + ") em " + evento.data;
 
                         if ($scope.compras[index].rastreio.toLowerCase() != objeto.numero.toLowerCase()) {
                             $scope.compras[index].ultimostatus += "  INCONSISTENTE[" + $scope.compras[index].rastreio.toLowerCase() + " - " + objeto.numero.toLowerCase();
