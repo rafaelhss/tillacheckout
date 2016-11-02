@@ -31,6 +31,7 @@
                 <div class="form-group">
                     <button type="button" class="btn btn-default btn-lg" ng-click="frete(cep);">gerar texto</button>
                     <button type="button" class="btn btn-default btn-lg" ng-click="limpar();">Limpar</button>
+                    <a type="button" class="btn btn-default btn-lg" ng-show="showshare" ng-href="whatsapp://send?text={{texto}}">Enviar no whats</a>
                 </div>
                 <div class="form-group">
                     <label for="texto">Texto:</label>

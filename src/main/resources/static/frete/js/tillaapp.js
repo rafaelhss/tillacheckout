@@ -1,6 +1,14 @@
 
 var app = angular.module("tillaApp", []);
 
+app.config( [
+    '$compileProvider',
+    function( $compileProvider )
+    {
+        $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|chrome-extension|whatsapp):/);
+        // Angular before v1.2 uses $compileProvider.urlSanitizationWhitelist(...)
+    }
+]);
 
 var atualizaTexto = function(postdata, valortag, prazotag, $scope, $http){
     $scope.carregando = true;
@@ -21,7 +29,7 @@ var atualizaTexto = function(postdata, valortag, prazotag, $scope, $http){
 
 
             $scope.texto = $scope.texto.replace(valortag, valor.toFixed(2)).replace(prazotag, prazo);
-
+            $scope.showshare = true;
 
         }).error(function (data, status) {
             $scope.carregando = false;
@@ -38,11 +46,13 @@ app.controller("tillaCtrl", function ($scope, $http) {
 
     $scope.limpar = function () {
         $scope.texto = localStorage.getItem("texto");
+        $scope.showshare = false;
     }
 
     $scope.limparStorage = function() {
         localStorage.removeItem("texto");
         $scope.texto = getTextoInicial();
+        $scope.showshare = false;
     }
 
 
