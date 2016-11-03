@@ -26,12 +26,12 @@ app.controller("CarrinhoController", function ($scope, $http, cart) {
         }
 
 
-        var texto = "Seu carrinho ate agora:" + quebraLinha
+        var texto = "Seu 'carrinho' ate agora:" + quebraLinha
         for(var item in resumo ) {
             texto += resumo[item].nome
-                + ':' + resumo[item].quantidade
-                + ' unid. ($' + resumo[item].preco+ ' cada) $'
-                + resumo[item].precoTotal;
+                + '(x' + resumo[item].quantidade
+                + ') $' + resumo[item].precoTotal
+                + ' (' + resumo[item].preco+ ' cada)'
             texto += quebraLinha;
         }
         return texto;
