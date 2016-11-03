@@ -18,17 +18,31 @@
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.js"></script>
+    <script src="../bower_components/x2js/xml2json.js"></script>
+
+
     <!-- Angular Material Library -->
     <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
 
+    <script src="./js/tillacatalogo.js"></script>
+    <script src="./js/CarrinhoController.js"></script>
+    <script src="./js/CatalogoRotas.js"></script>
+    <script src="./js/calculaFrete.js"></script>
 
-    <script src="js/tillacatalogo.js"></script>
+
     <link rel="stylesheet" href="../style.css">
 
     <style>
         .produtoImg{
             max-height: 200px;
+        }
+        .carrinho{
+            position: fixed;
+            top: 110px;
+            right: 50px;
+            z-index: 1;
         }
     </style>
     <title>Tilla Catalogo</title>
@@ -36,6 +50,14 @@
 </head>
 
 <body ng-controller="catalogoCtrl">
+<div class="carrinho">
+   <a href="#/carrinho">
+    <span class="fa-stack fa-lg" ng-show="carrinho.length > 0">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"><small>{{carrinho.length}}</small></i>
+    </span>
+   </a>
+</div>
 <div class="container">
 
     <div class="jumbotron logo">
@@ -43,75 +65,9 @@
         <h2 class="fancy"><span>Catalogo</span></h2>
     </div>
 
-    <div>
-         <span ng-click="filtro.categoria = 'CILIOS'" ng-class="filtro.categoria == 'CILIOS' ? 'btn-info': 'btn-primary'"  class="btn btn-primary">
-             <i class="fa fa-filter" aria-hidden="true"></i> Cilios
-         </span>
-         <span ng-click="filtro.categoria = 'KRYOLAN'" ng-class="filtro.categoria == 'KRYOLAN' ? 'btn-info': 'btn-primary'" class="btn btn-primary">
-             <i class="fa fa-filter" aria-hidden="true"></i> Kryolan
-         </span>
-         <span ng-click="filtro.categoria = 'ATELIER'" ng-class="filtro.categoria == 'ATELIER' ? 'btn-info': 'btn-primary'"class="btn btn-primary">
-             <i class="fa fa-filter" aria-hidden="true"></i> Atelier
-         </span>
-            <span ng-click="filtro.categoria = undefined" ng-class="filtro.categoria == undefined ? 'btn-info': 'btn-primary'"class="btn btn-primary">
-             <i class="fa fa-filter" aria-hidden="true"></i> TODAS
-         </span>
-    </div>
 
-    <div class="row">
+    <ng-view></ng-view>
 
-
-         <div ng-repeat="produto in produtos | filter:filtro.categoria " class="col-md-4">
-             <md-card>
-                 <img class="produtoImg" ng-src="{{produto.imgurl}}" class="md-card-image">
-                 <md-card-title>
-                     <md-toolbar class="md-theme-light">
-                         <h2 class="md-toolbar-tools">
-                             <span>{{produto.nome}}</span>
-                         </h2>
-                         <md-card-actions layout="row" layout-align="end center">
-                             <md-button class="md-icon-button" ng-href="whatsapp://send?text={{produto.descCurta}}({{produto.preco}})"><i class="fa fa-minus" aria-hidden="true"></i></md-button>
-                             <md-button class="md-icon-button" ng-href="whatsapp://send?text={{produto.descCurta}}({{produto.preco}})"><i class="fa fa-plus" aria-hidden="true"></i></md-button>
-                         </md-card-actions>
-                     </md-toolbar>
-
-                 </md-card-title>
-
-                 <md-card-content>
-                     <md-content>
-                         <md-list>
-                             <md-list-item class="md-3-line md-long-text">
-                                 <div class="md-list-item-text">
-                                     <p>{{produto.descCurta}}({{produto.preco}})</p>
-                                 </div>
-                                 <md-button class="md-icon-button" ng-href="whatsapp://send?text={{produto.descCurta}}({{produto.preco}})"><i class="fa fa-whatsapp" aria-hidden="true"></i></md-button>
-                                 <md-divider></md-divider>
-                             </md-list-item>
-                             <md-list-item class="md-3-line md-long-text">
-                                 <div class="md-list-item-text">
-                                     <p>{{produto.descCompleta}}</p>
-                                 </div>
-                                 <md-button class="md-icon-button" ng-href="whatsapp://send?text={{produto.descCompleta}}"><i class="fa fa-whatsapp" aria-hidden="true"></i></md-button>
-                                 <md-divider></md-divider>
-                             </md-list-item>
-                             <md-list-item class="md-3-line md-long-text">
-                                 <div class="md-list-item-text">
-                                     <p>{{produto.descAdicional}}</p>
-                                 </div>
-                                 <md-button class="md-icon-button" ng-href="whatsapp://send?text={{produto.descAdicional}}"><i class="fa fa-whatsapp" aria-hidden="true"></i></md-button>
-                             </md-list-item>
-                         </md-list>
-                     </md-content>
-                 </md-card-content>
-             </md-card>
-
-
-
-
-            </div>
-        </div>
-
-    </div>
 </div>
 
 

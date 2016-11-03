@@ -1,0 +1,76 @@
+<div>
+         <span ng-click="filtro.categoria = 'CILIOS'" ng-class="filtro.categoria == 'CILIOS' ? 'btn-info': 'btn-primary'"  class="btn btn-primary">
+             <i class="fa fa-filter" aria-hidden="true"></i> Cilios
+         </span>
+         <span ng-click="filtro.categoria = 'KRYOLAN'" ng-class="filtro.categoria == 'KRYOLAN' ? 'btn-info': 'btn-primary'" class="btn btn-primary">
+             <i class="fa fa-filter" aria-hidden="true"></i> Kryolan
+         </span>
+         <span ng-click="filtro.categoria = 'ATELIER'" ng-class="filtro.categoria == 'ATELIER' ? 'btn-info': 'btn-primary'"class="btn btn-primary">
+             <i class="fa fa-filter" aria-hidden="true"></i> Atelier
+         </span>
+            <span ng-click="filtro.categoria = undefined" ng-class="filtro.categoria == undefined ? 'btn-info': 'btn-primary'"class="btn btn-primary">
+             <i class="fa fa-filter" aria-hidden="true"></i> TODAS
+         </span>
+</div>
+
+
+<div class="form-group">
+    <label for="busca">filtrar:</label>
+    <input id="busca" class="form-control" ng-model="busca" placeholder="exemplo: cilios ou y59 ou atelier">
+    <small>{{results.length}} produtos encontrados</small>
+</div>
+
+<div class="row">
+
+
+    <div ng-repeat="produto in produtos| tudo:busca as results  track by $index " class="col-md-4">
+        <md-card>
+            <img class="produtoImg" ng-src="{{produto.imgurl}}" class="md-card-image">
+            <md-card-title>
+                <md-toolbar class="md-theme-light">
+                    <h2 class="md-toolbar-tools">
+                        <span>{{produto.nome}}</span>
+                    </h2>
+                    <md-card-actions layout="row" layout-align="end center">
+                        <md-button aria-label="no" class="md-icon-button" ng-click="removeCart(produto)"><i class="fa fa-minus" aria-hidden="true"></i></md-button>
+                        <md-button aria-label="no" class="md-icon-button" ng-click="addCart(produto)"><i class="fa fa-plus" aria-hidden="true"></i></md-button>
+                    </md-card-actions>
+                </md-toolbar>
+
+            </md-card-title>
+
+            <md-card-content>
+                <md-content>
+                    <md-list>
+                        <md-list-item class="md-3-line md-long-text">
+                            <div class="md-list-item-text">
+                                <p>{{produto.descCurta}}({{produto.preco}})</p>
+                            </div>
+                            <md-button aria-label="no" class="md-icon-button" ng-href="whatsapp://send?text={{produto.descCurta}}({{produto.preco}})"><i class="fa fa-whatsapp" aria-hidden="true"></i></md-button>
+                            <md-divider></md-divider>
+                        </md-list-item>
+                        <md-list-item class="md-3-line md-long-text">
+                            <div class="md-list-item-text">
+                                <p>{{produto.descCompleta}}</p>
+                            </div>
+                            <md-button aria-label="no" class="md-icon-button" ng-href="whatsapp://send?text={{produto.descCompleta}}"><i class="fa fa-whatsapp" aria-hidden="true"></i></md-button>
+                            <md-divider></md-divider>
+                        </md-list-item>
+                        <md-list-item class="md-3-line md-long-text">
+                            <div class="md-list-item-text">
+                                <p>{{produto.descAdicional}}</p>
+                            </div>
+                            <md-button aria-label="no" class="md-icon-button" ng-href="whatsapp://send?text={{produto.descAdicional}}"><i class="fa fa-whatsapp" aria-hidden="true"></i></md-button>
+                        </md-list-item>
+                    </md-list>
+                </md-content>
+            </md-card-content>
+        </md-card>
+
+
+
+
+    </div>
+</div>
+
+</div>
