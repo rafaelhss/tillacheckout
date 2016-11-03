@@ -2,6 +2,11 @@ app.controller("CarrinhoController", function ($scope, $http, cart) {
 
     $scope.carrinho = cart;
 
+    $scope.limparCarrinho = function(){
+        console.log('yhg')
+        cart = [];
+        $scope.carrinho = cart;
+    }
 
    console.log("oi")
 

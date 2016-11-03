@@ -10,7 +10,7 @@ app.config( [
 ]);
 
 
-var getProdutoTeste = function(nome, preco, descCurta, descCompleta, descAdicional, categoria, imgurl){
+var getProdutoTeste = function(nome, preco, descCurta, descCompleta, descAdicional, categoria, imgurl, quantidadebh, quantidadebsb){
     var produto = {};
     produto.nome = nome;
     produto.descCurta = descCurta;
@@ -19,13 +19,15 @@ var getProdutoTeste = function(nome, preco, descCurta, descCompleta, descAdicion
     produto.preco = preco;
     produto.categoria = categoria;
     produto.imgurl = imgurl;
+    produto.quantidadebh = quantidadebh;
+    produto.quantidadebsb = quantidadebsb;
 
     return produto;
 }
 
 
 app.filter('tudo', function () {
-    return function (produtos, texto) {
+    return function (produtos, texto, embh, embsb) {
         if(texto != undefined && texto.trim().length > 0) {
             var items = {
                 txt: texto,
@@ -35,9 +37,13 @@ app.filter('tudo', function () {
                 var palavras = this.txt.split(" ");
                 var itens = this;
                 palavras.forEach(function (palavra) {
+                    console.log('produto.quantidadebh :' + produto.quantidadebh )
+                    console.log('produto.quantidadebsb :' + produto.quantidadebsb )
                     if (produto.descCurta.toLowerCase().indexOf(palavra.toLowerCase()) > 0) {
-                        if(itens.out.indexOf(produto) == -1) {
-                            itens.out.push(produto)
+                        if((embh && produto.quantidadebh > 0) || (embsb && produto.quantidadebsb > 0)) {
+                            if (itens.out.indexOf(produto) == -1) {
+                                itens.out.push(produto)
+                            }
                         }
                     }
                 })
@@ -45,7 +51,18 @@ app.filter('tudo', function () {
             return items.out;
         }
         else {
-            return produtos;
+            var items = {
+                out: []
+            };
+            angular.forEach(produtos, function (produto, key) {
+                var itens = this;
+                if((embh && produto.quantidadebh > 0) || (embsb && produto.quantidadebsb > 0)) {
+                    if (itens.out.indexOf(produto) == -1) {
+                          itens.out.push(produto)
+                    }
+                }
+            }, items);
+            return items.out;
         }
     };
 });
@@ -56,7 +73,11 @@ app.factory("cart",function(){
 
 app.controller("catalogoCtrl", function ($scope, $http, cart) {
 
-    $scope.carrinho =cart;
+
+    $scope.embh = true;
+    $scope.embsb = true;
+
+    $scope.carrinho = cart;
 
     $scope.addCart = function(produto){
         $scope.carrinho.push(produto);
@@ -71,10 +92,10 @@ app.controller("catalogoCtrl", function ($scope, $http, cart) {
 
     $scope.getProdutos = function(){
         var produtos = [];
-        produtos.push(getProdutoTeste('Cilios Y59', '25', 'Cilios modelo Y59 com 10 pares', 'O Y59 vem com 10 pares e tem base de linha', "O y59 tem base d elinha que facilita a colocação. ele dá um efeito natural sem ser mioto cheio.", "CILIOS","http://d236bkdxj385sg.cloudfront.net/wp-content/uploads/2012/09/EYELASHES1.jpg"))
-        produtos.push(getProdutoTeste('Cilios K16', '25', 'Cilios modelo K16 com 10 pares', 'O K16 vem com 10 pares e tem base de silicone', "O K16 tem base de silicone que facilita a colocação. ele dá um efeito super marcante pois é super volumoso. Eh nosso campeão de vendas.", "CILIOS","http://d236bkdxj385sg.cloudfront.net/wp-content/uploads/2012/09/EYELASHES1.jpg"))
-        produtos.push(getProdutoTeste('Paleta Atelier modelo T03', '175', 'Paleta de sombras atelier modelo T03', 'Essa paleta vem com 5 sombras com cores variadas', "As paletas da atelier são as melhores do mercado. As cores da T03 são mais para make de festa.", "PALETAS","http://d236bkdxj385sg.cloudfront.net/wp-content/uploads/2012/09/EYELASHES1.jpg"))
-        produtos.push(getProdutoTeste('Paletas Atelier', '175', 'Paletas de sombras atelier, modelos T03, T02, T22, T', 'Essa paleta vem com 5 sombras com cores variadas', "As paletas da atelier são as melhores do mercado. As cores da T03 são mais para make de festa.", "PALETAS","http://d236bkdxj385sg.cloudfront.net/wp-content/uploads/2012/09/EYELASHES1.jpg"))
+        produtos.push(getProdutoTeste('Cilios Y59', '25', 'Cilios modelo Y59 com 10 pares', 'O Y59 vem com 10 pares e tem base de linha', "O y59 tem base d elinha que facilita a colocaï¿½ï¿½o. ele dï¿½ um efeito natural sem ser mioto cheio.", "CILIOS","http://d236bkdxj385sg.cloudfront.net/wp-content/uploads/2012/09/EYELASHES1.jpg",50,40))
+        produtos.push(getProdutoTeste('Cilios K16', '25', 'Cilios modelo K16 com 10 pares', 'O K16 vem com 10 pares e tem base de silicone', "O K16 tem base de silicone que facilita a colocaï¿½ï¿½o. ele dï¿½ um efeito super marcante pois ï¿½ super volumoso. Eh nosso campeï¿½o de vendas.", "CILIOS","http://d236bkdxj385sg.cloudfront.net/wp-content/uploads/2012/09/EYELASHES1.jpg",30,0))
+        produtos.push(getProdutoTeste('Paleta Atelier modelo T03', '175', 'Paleta de sombras atelier modelo T03', 'Essa paleta vem com 5 sombras com cores variadas', "As paletas da atelier sï¿½o as melhores do mercado. As cores da T03 sï¿½o mais para make de festa.", "PALETAS","http://d236bkdxj385sg.cloudfront.net/wp-content/uploads/2012/09/EYELASHES1.jpg",0,2))
+        produtos.push(getProdutoTeste('Paletas Atelier', '175', 'Paletas de sombras atelier, modelos T03, T02, T22, T', 'Essa paleta vem com 5 sombras com cores variadas', "As paletas da atelier sï¿½o as melhores do mercado. As cores da T03 sï¿½o mais para make de festa.", "PALETAS","http://d236bkdxj385sg.cloudfront.net/wp-content/uploads/2012/09/EYELASHES1.jpg",2,3))
         return produtos;
     }
 

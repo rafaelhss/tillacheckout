@@ -1,18 +1,12 @@
-<div>
-         <span ng-click="filtro.categoria = 'CILIOS'" ng-class="filtro.categoria == 'CILIOS' ? 'btn-info': 'btn-primary'"  class="btn btn-primary">
-             <i class="fa fa-filter" aria-hidden="true"></i> Cilios
-         </span>
-         <span ng-click="filtro.categoria = 'KRYOLAN'" ng-class="filtro.categoria == 'KRYOLAN' ? 'btn-info': 'btn-primary'" class="btn btn-primary">
-             <i class="fa fa-filter" aria-hidden="true"></i> Kryolan
-         </span>
-         <span ng-click="filtro.categoria = 'ATELIER'" ng-class="filtro.categoria == 'ATELIER' ? 'btn-info': 'btn-primary'"class="btn btn-primary">
-             <i class="fa fa-filter" aria-hidden="true"></i> Atelier
-         </span>
-            <span ng-click="filtro.categoria = undefined" ng-class="filtro.categoria == undefined ? 'btn-info': 'btn-primary'"class="btn btn-primary">
-             <i class="fa fa-filter" aria-hidden="true"></i> TODAS
-         </span>
+<div class="form-group" layout="row">
+    <label>mostrar disponiveis:</label>
+    <md-switch ng-model="embh" aria-label="Em bh">
+        Em BH
+    </md-switch>
+    <md-switch ng-model="embsb" aria-label="Em bsb">
+        Em BSB
+    </md-switch>
 </div>
-
 
 <div class="form-group">
     <label for="busca">filtrar:</label>
@@ -23,23 +17,23 @@
 <div class="row">
 
 
-    <div ng-repeat="produto in produtos| tudo:busca as results  track by $index " class="col-md-4">
+    <div ng-repeat="produto in produtos| tudo:busca:embh:embsb as results  track by $index " class="col-md-4">
         <md-card>
             <img class="produtoImg" ng-src="{{produto.imgurl}}" class="md-card-image">
             <md-card-title>
-                <md-toolbar class="md-theme-light">
+               <md-toolbar class="md-theme-light">
                     <h2 class="md-toolbar-tools">
-                        <span>{{produto.nome}}</span>
+                        <span>{{produto.nome}} (${{produto.preco}})</span>
                     </h2>
                     <md-card-actions layout="row" layout-align="end center">
                         <md-button aria-label="no" class="md-icon-button" ng-click="removeCart(produto)"><i class="fa fa-minus" aria-hidden="true"></i></md-button>
                         <md-button aria-label="no" class="md-icon-button" ng-click="addCart(produto)"><i class="fa fa-plus" aria-hidden="true"></i></md-button>
                     </md-card-actions>
                 </md-toolbar>
-
             </md-card-title>
 
             <md-card-content>
+                <h6>BH({{produto.quantidadebh}}) BSB({{produto.quantidadebsb}})</h6>
                 <md-content>
                     <md-list>
                         <md-list-item class="md-3-line md-long-text">
