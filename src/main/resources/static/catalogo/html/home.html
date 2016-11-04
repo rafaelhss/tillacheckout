@@ -19,9 +19,9 @@
 
     <div ng-repeat="produto in produtos| tudo:busca:embh:embsb as results  track by $index " class="col-md-4">
         <md-card>
-            
-            <img class="produtoImg" src="./img/{{produto.imgurl}}" class="md-card-image">
-
+            <a ng-href="./img/{{produto.imgurl}}">
+                <img class="produtoImg" ng-src="./img/{{produto.imgurl}}" class="md-card-image">
+            </a>
             <md-card-title>
                <md-toolbar class="md-theme-light">
                     <h2 class="md-toolbar-tools">
