@@ -39,7 +39,14 @@ app.filter('tudo', function () {
                 palavras.forEach(function (palavra) {
                     console.log('produto.quantidadebh :' + produto.quantidadebh )
                     console.log('produto.quantidadebsb :' + produto.quantidadebsb )
-                    if (produto.descCurta.toLowerCase().indexOf(palavra.toLowerCase()) > 0) {
+                    if (
+                        (produto.nome.toLowerCase().indexOf(palavra.toLowerCase()) > 0) ||
+                        (produto.descCurta.toLowerCase().indexOf(palavra.toLowerCase()) > 0) ||
+                        (produto.descCompleta.toLowerCase().indexOf(palavra.toLowerCase()) > 0) ||
+                        (produto.descAdicional.toLowerCase().indexOf(palavra.toLowerCase()) > 0) ||
+                        (produto.marca.toLowerCase().indexOf(palavra.toLowerCase()) > 0)
+
+                    ) {
                         if((embh && produto.quantidadebh > 0) || (embsb && produto.quantidadebsb > 0)) {
                             if (itens.out.indexOf(produto) == -1) {
                                 itens.out.push(produto)
