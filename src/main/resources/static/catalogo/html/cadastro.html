@@ -3,6 +3,9 @@
 </div>
 <div class="alert alert-success" role="alert" ng-show="novoproduto.id">
     <strong>Produto cadastrado!</strong> Codigo do novo produto: {{novoproduto.id}}.
+    <div class="col-md-12">
+        <a ng-href="/catalogo/index.html" class="btn btn-primary">voltar</a>
+    </div>
 </div>
 <p>Novo Produto:</p>
 <div ng-show="carregando" class="col-md-12 text-center">
@@ -46,5 +49,5 @@
 </div>
 <div class="form-group">
     <button class="btn btn-primary" ng-click="cadastrar(novoproduto)">Cadastrar produto</button>
-
 </div>
+
