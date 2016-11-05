@@ -46,7 +46,7 @@ app.controller("CarrinhoController", function ($scope, $http, cart) {
     }
 
     $scope.textoenvio = "";
-
+    $scope.valorfrete = 0;
 
     $scope.getTexto = function(encoded){
         console.log('gettextp')
@@ -54,7 +54,8 @@ app.controller("CarrinhoController", function ($scope, $http, cart) {
         texto += $scope.textoenvio;
 
         texto += quebraLinha;
-        texto += "total: " + $scope.valortotal;
+        var pag = Number($scope.valortotal) + Number($scope.valorfrete);
+        texto += "total: " + pag ;
 
         if(encoded){
             return texto;
@@ -79,6 +80,7 @@ app.controller("CarrinhoController", function ($scope, $http, cart) {
             if($scope.envio == 'pedir'){
                 $scope.textoenvio += quebraLinha;
                 $scope.textoenvio += "Falta o frete. Me passa seu cep para eu calcular?" + quebraLinha;
+                $scope.valorfrete = 0;
             } else if($scope.envio == 'pac'){
                 $scope.textoenvio += quebraLinha;
                 $scope.textoenvio += "Envio PAC: $[valor] ([prazo] dias)" + quebraLinha;

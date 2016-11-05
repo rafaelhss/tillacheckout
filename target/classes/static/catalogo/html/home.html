@@ -1,0 +1,94 @@
+<div ng-show="carregando" class="col-md-12 text-center">
+    <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+</div>
+<div class="alert alert-danger" role="alert" ng-show="error">
+    <strong>Erro</strong> Erro ao gravar: {{error}}.
+</div>
+
+<div class="form-group" layout="row">
+    <label>mostrar disponiveis:</label>
+    <md-switch ng-model="embh" aria-label="Em bh">
+        Em BH
+    </md-switch>
+    <md-switch ng-model="embsb" aria-label="Em bsb">
+        Em BSB
+    </md-switch>
+</div>
+
+<div class="form-group">
+    <label for="busca">filtrar:</label>
+    <input id="busca" class="form-control" ng-model="busca" placeholder="exemplo: cilios ou y59 ou atelier">
+    <small>{{results.length}} produtos encontrados</small>
+</div>
+
+<div class="row">
+    <div ng-repeat="produto in produtos| tudo:busca:embh:embsb as results  track by $index " class="col-md-12">
+        <md-card>
+
+            <img class="produtoImg" ng-src="{{produto.imgurl}}" class="md-card-image">
+
+            <md-card-title>
+               <md-toolbar class="md-theme-light">
+                    <h2 class="md-toolbar-tools">
+                        <span>{{produto.nome}} (${{produto.preco}})</span>
+                    </h2>
+                    <md-card-actions layout="row" layout-align="end center">
+                    </md-card-actions>
+                   <md-fab-toolbar md-open="demo.isOpen" count="demo.count"
+                                   md-direction="left">
+                       <md-fab-trigger class="align-with-text">
+                           <md-button aria-label="menu" class="md-fab md-warm">
+                               <md-icon md-svg-src="img/icons/menu.svg"></md-icon>
+                           </md-button>
+                       </md-fab-trigger>
+                       <md-toolbar>
+                           <md-fab-actions class="md-toolbar-tools">
+                               <md-button aria-label="no" class="md-icon-button" ng-click="addCart(produto)"><i class="fa fa-plus" aria-hidden="true"></i></md-button>
+                               <md-button aria-label="no" class="md-icon-button" ng-click="removeCart(produto)"><i class="fa fa-minus" aria-hidden="true"></i></md-button>
+                                <a aria-label="no" class="md-icon-button" ng-href="#/editar/{{produto.id}}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                           </md-fab-actions>
+                       </md-toolbar>
+                   </md-fab-toolbar>
+                </md-toolbar>
+            </md-card-title>
+
+            <md-card-content>
+                <h6>BH({{produto.quantidadebh}}) BSB({{produto.quantidadebsb}})</h6>
+                <md-content>
+                    <md-list>
+                        <md-list-item class="md-3-line md-long-text">
+                            <div class="md-list-item-text">
+                                <p>{{produto.descCurta}} (${{produto.preco}})</p>
+                            </div>
+                            <md-button aria-label="no" class="md-icon-button" ng-href="whatsapp://send?text={{produto.descCurta}}({{produto.preco}})"><i class="fa fa-whatsapp" aria-hidden="true"></i></md-button>
+                            <md-divider></md-divider>
+                        </md-list-item>
+                        <md-list-item class="md-3-line md-long-text">
+                            <div class="md-list-item-text">
+                                <p>{{produto.descCompleta}}</p>
+                            </div>
+                            <md-button aria-label="no" class="md-icon-button" ng-href="whatsapp://send?text={{produto.descCompleta}}"><i class="fa fa-whatsapp" aria-hidden="true"></i></md-button>
+                            <md-divider></md-divider>
+                        </md-list-item>
+                        <md-list-item class="md-3-line md-long-text">
+                            <div class="md-list-item-text">
+                                <p>{{produto.descAdicional}}</p>
+                            </div>
+                            <md-button aria-label="no" class="md-icon-button" ng-href="whatsapp://send?text={{produto.descAdicional}}"><i class="fa fa-whatsapp" aria-hidden="true"></i></md-button>
+                        </md-list-item>
+                    </md-list>
+                </md-content>
+            </md-card-content>
+        </md-card>
+
+
+
+
+    </div>
+    <div class="col-md-12">
+        <a ng-href="/catalogo/index.html#/cadastro" class="btn btn-primary">Cadastrar Novo</a>
+    </div>
+
+</div>
+
+</div>
