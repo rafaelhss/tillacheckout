@@ -41,7 +41,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tillacatalogo.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tillacatalogo.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/catalogo/js/tillacatalogo.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
@@ -71,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tillaconfig.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="tillaconfig.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/tillaconfig.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.14876033">
+              <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -166,7 +166,6 @@
         <option value="$PROJECT_DIR$/catalogo/js/CarrinhoController.js" />
         <option value="$PROJECT_DIR$/catalogo/js/calculaFrete.js" />
         <option value="$PROJECT_DIR$/js/tillaapp.js" />
-        <option value="$PROJECT_DIR$/js/tillaconfig.js" />
         <option value="$PROJECT_DIR$/catalogo/index.html" />
         <option value="$PROJECT_DIR$/catalogo/html/cadastro.html" />
         <option value="$PROJECT_DIR$/catalogo/html/editar.html" />
@@ -175,6 +174,7 @@
         <option value="$PROJECT_DIR$/catalogo/js/CadastroController.js" />
         <option value="$PROJECT_DIR$/catalogo/html/home.html" />
         <option value="$PROJECT_DIR$/catalogo/js/tillacatalogo.js" />
+        <option value="$PROJECT_DIR$/js/tillaconfig.js" />
       </list>
     </option>
   </component>
@@ -828,14 +828,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/tillaconfig.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/catalogo/js/CatalogoRotas.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -848,6 +840,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/tillaconfig.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14876033">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
           <folding />
         </state>
       </provider>
