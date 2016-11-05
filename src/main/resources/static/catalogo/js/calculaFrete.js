@@ -22,6 +22,8 @@ var atualizaTexto = function(postdata, valortag, prazotag, $scope, $http){
             var prazo = 0 + jsonObj.cResultado.Servicos.cServico.PrazoEntrega;
             var valor =  parseFloat("1.00") + parseFloat(jsonObj.cResultado.Servicos.cServico.Valor.replace(",",".")); //soma $1 pra caixa
 
+            console.log("oi valor atualiza:" + valor);
+            $scope.valortotal += valor;
 
 
             $scope.textoenvio = $scope.textoenvio.replace(valortag, valor.toFixed(2)).replace(prazotag, prazo);

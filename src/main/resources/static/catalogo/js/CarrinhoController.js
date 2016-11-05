@@ -14,6 +14,8 @@ app.controller("CarrinhoController", function ($scope, $http, cart) {
 
     var montaTextoBase = function(){
 
+        $scope.valortotal = 0;
+
         var resumo = {};
 
 
@@ -28,6 +30,7 @@ app.controller("CarrinhoController", function ($scope, $http, cart) {
 
         for(var item in resumo ){
             resumo[item].precoTotal = resumo[item].quantidade * resumo[item].preco;
+            $scope.valortotal += resumo[item].precoTotal;
         }
 
 
@@ -44,9 +47,14 @@ app.controller("CarrinhoController", function ($scope, $http, cart) {
 
     $scope.textoenvio = "";
 
+
     $scope.getTexto = function(encoded){
+        console.log('gettextp')
         var texto = montaTextoBase();
         texto += $scope.textoenvio;
+
+        texto += quebraLinha;
+        texto += "total: " + $scope.valortotal;
 
         if(encoded){
             return texto;
