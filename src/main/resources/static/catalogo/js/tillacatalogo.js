@@ -117,6 +117,7 @@ app.controller("catalogoCtrl", function ($scope, $http, cart, TillaConfig) {
     $http.get(TillaConfig.apiUrl + "/produto")
         .then(function(resultado){
             $scope.produtos = resultado.data;
+
         }, function(erro){
             $scope.error = erro.status;
 

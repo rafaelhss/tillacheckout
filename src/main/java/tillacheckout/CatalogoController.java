@@ -49,8 +49,8 @@ public class CatalogoController {
         if(produto.getDescCurta() != null) {
             p.setDescCurta(produto.getDescCurta());
         }
-        if(produto.getImgurl() != null) {
-            p.setImgurl(produto.getImgurl());
+        if(produto.getImagens() != null && produto.getImagens().size() > 0) {
+            p.setImagens(produto.getImagens());
         }
         if(produto.getMarca() != null) {
             p.setMarca(produto.getMarca());
@@ -84,7 +84,7 @@ public class CatalogoController {
             value = "/api/produto",
             method = RequestMethod.GET)
     public @ResponseBody List<Produto> listarProdutos(){
-        return  Lists.newArrayList(produtoRepository.findAll());
+        return Lists.newArrayList(produtoRepository.findAll());
     }
 
     @RequestMapping("/api/produto/{id}")

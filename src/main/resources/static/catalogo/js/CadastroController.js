@@ -42,6 +42,9 @@ app.controller("CadastroController", function ($scope, $http, TillaConfig, $loca
 
         produto.id = undefined;
 
+        produto.imagens = [{url:produto.imgurl, autor: "tillaviana", data: new Date()}];
+
+
         $scope.carregando = true;
         $scope.error = undefined;
 

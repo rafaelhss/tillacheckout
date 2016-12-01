@@ -9,6 +9,9 @@ app.controller("EditarController", function ($scope, $http, TillaConfig, $routeP
     $http.get(TillaConfig.apiUrl + "/produto/" + $routeParams.id)
         .then(function(result){
             $scope.novoproduto = result.data;
+            if($scope.novoproduto.imagens != undefined){
+                $scope.novoproduto.imgurl = $scope.novoproduto.imagens[0].url;
+            }
         },function(erro){
             console.log(erro.status);
             console.log(erro)
@@ -18,6 +21,10 @@ app.controller("EditarController", function ($scope, $http, TillaConfig, $routeP
     $scope.salvar = function(produto){
 
         produto.id = undefined;
+        produto.imagens = [{url:produto.imgurl, autor: "tillaviana", data: new Date()}];
+
+
+
 
         $scope.carregando = true;
         $scope.error = undefined;

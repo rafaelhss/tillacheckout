@@ -2,6 +2,7 @@ package tillacheckout.catalogo;
 
 import org.springframework.data.repository.CrudRepository;
 
+
 /**
  * Created by rafa on 05/11/2016.
  */
