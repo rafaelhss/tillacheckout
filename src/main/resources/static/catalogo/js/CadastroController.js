@@ -48,10 +48,27 @@ app.controller("CadastroController", function ($scope, $http, TillaConfig, $loca
         $scope.carregando = true;
         $scope.error = undefined;
 
+
+
+
         $http.post(TillaConfig.apiUrl + "/produto", produto )
             .then(function(result){
                 console.log(result.data);
                 $scope.novoproduto = result.data;
+
+                // TODO when WS success
+                var file = new Blob([ JSON.stringify(produto) ], {
+                    type : 'application/json'
+                });
+                //trick to download store a file having its URL
+                var fileURL = URL.createObjectURL(file);
+                var a         = document.createElement('a');
+                a.href        = fileURL;
+                a.target      = '_blank';
+                a.download    = $scope.selectedFile+'.json';
+                document.body.appendChild(a);
+                a.click();
+
             }, function(erro){
                 console.log(erro.status);
                 console.log(erro)
