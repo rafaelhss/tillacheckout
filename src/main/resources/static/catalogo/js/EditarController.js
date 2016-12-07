@@ -18,6 +18,19 @@ app.controller("EditarController", function ($scope, $http, TillaConfig, $routeP
             $scope.error = erro.status;
         } )
 
+
+    $scope.addNovaImagem = function(produto){
+        produto.imagens.push(
+            {"url":"","autor":"tillaviana","data":new Date()}
+        );
+    };
+
+    $scope.removeImagem = function(index, produto){
+        produto.imagens.splice(index,1);
+    };
+
+
+
     $scope.salvar = function(produto){
 
         produto.id = undefined;

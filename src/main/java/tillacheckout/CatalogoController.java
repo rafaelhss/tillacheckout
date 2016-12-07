@@ -33,7 +33,7 @@ public class CatalogoController {
         return produtoRepository.save(produto);
     }
 
-
+    @CrossOrigin(origins = "http://localhost:63343")
     @RequestMapping(
             value = "/api/produto/{id}",
             method = RequestMethod.PUT)
@@ -85,6 +85,7 @@ public class CatalogoController {
         }
     }
 
+    @CrossOrigin(origins = "http://localhost:63343")
     @RequestMapping(
             value = "/api/produto",
             method = RequestMethod.GET)
@@ -92,6 +93,7 @@ public class CatalogoController {
         return Lists.newArrayList(produtoRepository.findAll());
     }
 
+    @CrossOrigin(origins = "http://localhost:63343")
     @RequestMapping("/api/produto/{id}")
     public @ResponseBody Produto buscarProduto(@PathVariable("id") long id){
         return produtoRepository.findOne(id);
