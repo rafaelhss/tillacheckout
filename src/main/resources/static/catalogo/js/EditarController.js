@@ -21,10 +21,7 @@ app.controller("EditarController", function ($scope, $http, TillaConfig, $routeP
     $scope.salvar = function(produto){
 
         produto.id = undefined;
-        produto.imagens = [{url:produto.imgurl, autor: "tillaviana", data: new Date()}];
-
-
-
+        //produto.imagens = [{url:produto.imgurl, autor: "tillaviana", data: new Date()}];
 
         $scope.carregando = true;
         $scope.error = undefined;

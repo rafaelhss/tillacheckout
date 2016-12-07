@@ -50,12 +50,12 @@ public class CatalogoController {
             p.setDescCurta(produto.getDescCurta());
         }
         if(produto.getImagens() != null && produto.getImagens().size() > 0) {
-            if(p.getImagens() != null && p.getImagens().size() > 0){
+           /* if(p.getImagens() != null && p.getImagens().size() > 0){
                 p.getImagens().addAll(produto.getImagens());
             }
-            else {
+            else {*/
                 p.setImagens(produto.getImagens());
-            }
+           // }
         }
         if(produto.getMarca() != null) {
             p.setMarca(produto.getMarca());

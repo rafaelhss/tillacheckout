@@ -34,7 +34,9 @@
 </div>
 <div class="form-group">
     <label for="imgurl">url da imagem (opciona):</label>
-    <input ng-blur="clearId()"  class="form-control" ng-model="novoproduto.imgurl" id="imgurl">
+    <div ng-repeat="imagem in novoproduto.imagens">
+        <input ng-blur="clearId()"  class="form-control" ng-model="imagem.url" id="imgurl">
+    </div>
 </div>
 <div class="form-group">
     <label for="quantidadebh">Quantidade em BH:</label>
