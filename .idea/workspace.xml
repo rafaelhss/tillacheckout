@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="30db8fe7-f605-4804-875e-0944eed977e4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tillacheckout/CatalogoController.java" afterPath="$PROJECT_DIR$/src/main/java/tillacheckout/CatalogoController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/.idea/workspace.xml" afterPath="$PROJECT_DIR$/src/main/resources/static/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/catalogo/html/editar.html" afterPath="$PROJECT_DIR$/src/main/resources/static/catalogo/html/editar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/catalogo/js/EditarController.js" afterPath="$PROJECT_DIR$/src/main/resources/static/catalogo/js/EditarController.js" />
     </list>
     <ignored path="tillacheckout.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -120,13 +117,13 @@
       <file leaf-file-name="CatalogoController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/tillacheckout/CatalogoController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.025730994">
-              <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.81988305">
+              <caret line="94" column="130" selection-start-line="94" selection-start-column="130" selection-end-line="94" selection-end-column="130" />
               <folding>
-                <element signature="e#3180#3181#0" expanded="true" />
-                <element signature="e#3250#3251#0" expanded="true" />
-                <element signature="e#3422#3423#0" expanded="true" />
-                <element signature="e#3474#3475#0" expanded="true" />
+                <element signature="e#3409#3410#0" expanded="true" />
+                <element signature="e#3479#3480#0" expanded="true" />
+                <element signature="e#3729#3730#0" expanded="true" />
+                <element signature="e#3781#3782#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1068,13 +1065,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tillacheckout/CatalogoController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.025730994">
-          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.81988305">
+          <caret line="94" column="130" selection-start-line="94" selection-start-column="130" selection-end-line="94" selection-end-column="130" />
           <folding>
-            <element signature="e#3180#3181#0" expanded="true" />
-            <element signature="e#3250#3251#0" expanded="true" />
-            <element signature="e#3422#3423#0" expanded="true" />
-            <element signature="e#3474#3475#0" expanded="true" />
+            <element signature="e#3409#3410#0" expanded="true" />
+            <element signature="e#3479#3480#0" expanded="true" />
+            <element signature="e#3729#3730#0" expanded="true" />
+            <element signature="e#3781#3782#0" expanded="true" />
           </folding>
         </state>
       </provider>
