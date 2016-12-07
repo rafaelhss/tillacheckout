@@ -65,7 +65,7 @@ app.controller("CadastroController", function ($scope, $http, TillaConfig, $loca
                 var a         = document.createElement('a');
                 a.href        = fileURL;
                 a.target      = '_blank';
-                a.download    = $scope.selectedFile+'.json';
+                a.download    = produto.nome.replace(/[^\w\s]/gi, '') +'.json';
                 document.body.appendChild(a);
                 a.click();
 
