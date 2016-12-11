@@ -53,14 +53,14 @@ app.filter('tudo', function () {
                 var palavras = this.txt.split(" ");
                 var itens = this;
                 palavras.forEach(function (palavra) {
-                    console.log('produto.quantidadebh :' + produto.quantidadebh )
-                    console.log('produto.quantidadebsb :' + produto.quantidadebsb )
+                    console.log('palavra:' + palavra);
+
                     if (
-                        (produto.nome.toLowerCase().indexOf(palavra.toLowerCase()) > 0) ||
-                        (produto.descCurta.toLowerCase().indexOf(palavra.toLowerCase()) > 0) ||
-                        (produto.descCompleta.toLowerCase().indexOf(palavra.toLowerCase()) > 0) ||
-                        (produto.descAdicional.toLowerCase().indexOf(palavra.toLowerCase()) > 0) ||
-                        (produto.marca.toLowerCase().indexOf(palavra.toLowerCase()) > 0)
+                        (produto.nome.toLowerCase().indexOf(palavra.toLowerCase()) >= 0) ||
+                        (produto.descCurta.toLowerCase().indexOf(palavra.toLowerCase()) >= 0) ||
+                        (produto.descCompleta.toLowerCase().indexOf(palavra.toLowerCase()) >= 0) ||
+                        (produto.descAdicional.toLowerCase().indexOf(palavra.toLowerCase()) >= 0) ||
+                        (produto.marca.toLowerCase().indexOf(palavra.toLowerCase()) >= 0)
 
                     ) {
                         if((embh && produto.quantidadebh > 0) || (embsb && produto.quantidadebsb > 0)) {

@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="30db8fe7-f605-4804-875e-0944eed977e4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application.properties" afterPath="$PROJECT_DIR$/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tillacheckout/CatalogoController.java" afterPath="$PROJECT_DIR$/src/main/java/tillacheckout/CatalogoController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tillacheckout/catalogo/Imagem.java" afterPath="$PROJECT_DIR$/src/main/java/tillacheckout/catalogo/Imagem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tillacheckout/catalogo/Produto.java" afterPath="$PROJECT_DIR$/src/main/java/tillacheckout/catalogo/Produto.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/.idea/workspace.xml" afterPath="$PROJECT_DIR$/src/main/resources/static/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/catalogo/js/tillacatalogo.js" afterPath="$PROJECT_DIR$/src/main/resources/static/catalogo/js/tillacatalogo.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tillaconfig.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/tillaconfig.js" />
     </list>
     <ignored path="tillacheckout.iws" />
@@ -43,8 +40,8 @@
       <file leaf-file-name="application.properties" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.81316346">
-              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.7006369">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -986,8 +983,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.81316346">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.7006369">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -31,11 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CadastroController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catalogo/js/CadastroController.js">
+      <file leaf-file-name="tillacatalogo.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalogo/js/tillacatalogo.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="78" column="14" selection-start-line="53" selection-start-column="8" selection-end-line="78" selection-end-column="14" />
+              <caret line="62" column="16" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -51,20 +51,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tillaconfig.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="tillaconfig.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/tillaconfig.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.09686609">
+              <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8254438">
+            <state vertical-scroll-proportion="-21.461538">
               <caret line="49" column="35" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
               <folding />
             </state>
@@ -157,13 +157,13 @@
         <option value="$PROJECT_DIR$/catalogo/js/calculaFrete.js" />
         <option value="$PROJECT_DIR$/catalogo/js/CarrinhoController.js" />
         <option value="$PROJECT_DIR$/catalogo/html/home.html" />
-        <option value="$PROJECT_DIR$/catalogo/js/tillacatalogo.js" />
         <option value="$PROJECT_DIR$/js/tillaapp.js" />
         <option value="$PROJECT_DIR$/catalogo/js/CadastroController.js" />
         <option value="$PROJECT_DIR$/catalogo/html/editar.html" />
         <option value="$PROJECT_DIR$/catalogo/js/EditarController.js" />
         <option value="$PROJECT_DIR$/backupJson/upload.js" />
         <option value="$PROJECT_DIR$/backupJson/upload.html" />
+        <option value="$PROJECT_DIR$/catalogo/js/tillacatalogo.js" />
         <option value="$PROJECT_DIR$/js/tillaconfig.js" />
       </list>
     </option>
@@ -695,13 +695,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/catalogo/js/tillacatalogo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/catalogo/html/cadastro.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-20.115385">
@@ -731,14 +724,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/catalogo/js/CadastroController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="78" column="14" selection-start-line="53" selection-start-column="8" selection-end-line="78" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/catalogo/js/EditarController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -763,6 +748,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.461538">
+          <caret line="49" column="35" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalogo/js/CadastroController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.024216523">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/catalogo/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.4615386">
@@ -771,18 +772,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/tillaconfig.js">
+    <entry file="file://$PROJECT_DIR$/catalogo/js/tillacatalogo.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <caret line="62" column="16" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/js/tillaconfig.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8254438">
-          <caret line="49" column="35" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.09686609">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
           <folding />
         </state>
       </provider>
