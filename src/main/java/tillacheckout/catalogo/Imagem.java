@@ -16,7 +16,7 @@ import java.util.Date;
 public class Imagem {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     private String url;
 

@@ -27,11 +27,35 @@ public class CatalogoController {
     @CrossOrigin(origins = {"http://localhost:63343", "http://localhost:63342", "http://tilla.com.br", "http://www.tilla.com.br"})
     @ResponseStatus(HttpStatus.CREATED)
     @RequestMapping(
+            value = "/api/produtos",
+            method = RequestMethod.POST)
+    public @ResponseBody List<Produto> registrarProdutos(@RequestBody List<Produto> produtos){
+
+        produtos.stream().forEach(
+                p -> {
+                    p.setId(null);
+                    p.getImagens().stream().forEach(
+                            i -> i.setId(null)
+                    );
+                    produtoRepository.save(p);
+                }
+        );
+
+        return Lists.newArrayList(produtoRepository.findAll());
+    }
+
+
+    @CrossOrigin(origins = {"http://localhost:63343", "http://localhost:63342", "http://tilla.com.br", "http://www.tilla.com.br"})
+    @ResponseStatus(HttpStatus.CREATED)
+    @RequestMapping(
             value = "/api/produto",
             method = RequestMethod.POST)
     public @ResponseBody Produto registrarProduto(@RequestBody Produto produto){
         return produtoRepository.save(produto);
     }
+
+
+
 
     @CrossOrigin(origins = {"http://localhost:63343", "http://localhost:63342", "http://tilla.com.br", "http://www.tilla.com.br"})@RequestMapping(
             value = "/api/produto/{id}",
