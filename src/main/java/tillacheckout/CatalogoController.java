@@ -24,7 +24,7 @@ public class CatalogoController {
     private ProdutoRepository produtoRepository;
 
 
-    @CrossOrigin(origins = {"http://localhost:63343", "http://localhost:63342", "http://tilla.com.br", "http://www.tilla.com.br"})
+    @CrossOrigin(origins = {"http://localhost:63343", "http://localhost:63342", "http://tilla.com.br", "http://tillaviana.com.br", "http://www.tillaviana.com.br","http://www.tilla.com.br"})
     @ResponseStatus(HttpStatus.CREATED)
     @RequestMapping(
             value = "/api/produtos",
@@ -45,7 +45,7 @@ public class CatalogoController {
     }
 
 
-    @CrossOrigin(origins = {"http://localhost:63343", "http://localhost:63342", "http://tilla.com.br", "http://www.tilla.com.br"})
+    @CrossOrigin(origins = {"http://localhost:63343", "http://localhost:63342", "http://tilla.com.br","http://tillaviana.com.br", "http://www.tillaviana.com.br", "http://www.tilla.com.br"})
     @ResponseStatus(HttpStatus.CREATED)
     @RequestMapping(
             value = "/api/produto",
@@ -57,7 +57,7 @@ public class CatalogoController {
 
 
 
-    @CrossOrigin(origins = {"http://localhost:63343", "http://localhost:63342", "http://tilla.com.br", "http://www.tilla.com.br"})@RequestMapping(
+    @CrossOrigin(origins = {"http://localhost:63343", "http://localhost:63342", "http://tilla.com.br","http://tillaviana.com.br", "http://www.tillaviana.com.br", "http://www.tilla.com.br"})@RequestMapping(
             value = "/api/produto/{id}",
             method = RequestMethod.PUT)
     public @ResponseBody Produto alterarProduto(@PathVariable("id") long id, @RequestBody Produto produto){
@@ -108,7 +108,7 @@ public class CatalogoController {
         }
     }
 
-    @CrossOrigin(origins = {"http://localhost:63343", "http://localhost:63342", "http://tilla.com.br", "http://www.tilla.com.br"})
+    @CrossOrigin(origins = {"http://localhost:63343", "http://localhost:63342", "http://tilla.com.br", "http://tillaviana.com.br", "http://www.tillaviana.com.br","http://www.tilla.com.br"})
     @RequestMapping(
             value = "/api/produto",
             method = RequestMethod.GET)
@@ -116,7 +116,7 @@ public class CatalogoController {
         return Lists.newArrayList(produtoRepository.findAll());
     }
 
-    @CrossOrigin(origins = {"http://localhost:63343", "http://localhost:63342", "http://tilla.com.br", "http://www.tilla.com.br"})
+    @CrossOrigin(origins = {"http://localhost:63343", "http://localhost:63342", "http://tilla.com.br", "http://tillaviana.com.br", "http://www.tillaviana.com.br", "http://www.tilla.com.br"})
     @RequestMapping("/api/produto/{id}")
     public @ResponseBody Produto buscarProduto(@PathVariable("id") long id){
         return produtoRepository.findOne(id);
