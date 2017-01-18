@@ -61,7 +61,7 @@ public class AdminController {
     @RequestMapping("/admin/vendas")
     public Page<Venda> getVendas(
                                     @RequestParam(name = "status", required = false) VendaStatus vendaStatus,
-                                    @RequestParam(value = "pagina", defaultValue = "1") Integer pagina,
+                                    @RequestParam(value = "pagina", defaultValue = "0") Integer pagina,
                                     @RequestParam(value = "tampagina", defaultValue = "10") Integer tampagina) {
         if(vendaStatus != null){
             return vendaRepository.findByVendaStatusOrderByDataDesc(vendaStatus, new PageRequest(pagina, tampagina));
