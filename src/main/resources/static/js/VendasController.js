@@ -14,7 +14,7 @@ app.controller("VendasController", function ($scope, $http, $location, TillaConf
 
     $http.get(TillaConfig.adminUrl + "/vendas")
         .then(function (response){
-            $scope.vendas = response.data;
+            $scope.vendas = response.data.content;
             $scope.url = TillaConfig.adminUrl;
         },function (response){
             console.log('Erro ao buscar vendas');
