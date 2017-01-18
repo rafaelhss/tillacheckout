@@ -6,6 +6,8 @@ import com.google.common.collect.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.core.io.InputStreamResource;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -55,14 +57,15 @@ public class AdminController {
     }
 
     @RequestMapping("/admin/vendas")
-    public List<Venda> getVendas(@RequestParam(name = "status", required = false) VendaStatus vendaStatus) {
+    public Page<Venda> getVendas(
+                                    @RequestParam(name = "status", required = false) VendaStatus vendaStatus,
+                                    @RequestParam(value = "pagina", defaultValue = "1") Integer pagina,
+                                    @RequestParam(value = "tampagina", defaultValue = "10") Integer tampagina) {
         if(vendaStatus != null){
-            return Lists.newArrayList(vendaRepository.findByVendaStatusOrderByDataDesc(vendaStatus));
+            return vendaRepository.findByVendaStatusOrderByDataDesc(vendaStatus, new PageRequest(pagina, tampagina));
         }
 
-        List<Venda> result = vendaRepository.findAllByOrderByDataDesc();
-
-        return Lists.newArrayList(result);
+        return vendaRepository.findAllByOrderByDataDesc(new PageRequest(pagina, tampagina));
     }
 
 
