@@ -56,6 +56,8 @@ public class AdminController {
         return "redirect:#/vendas";
     }
 
+    @CrossOrigin(origins = {"http://localhost:8080", "http://localhost:63343", "http://localhost:63342", "http://tilla.com.br","http://tillaviana.com.br", "http://www.tillaviana.com.br", "http://www.tilla.com.br"})
+
     @RequestMapping("/admin/vendas")
     public Page<Venda> getVendas(
                                     @RequestParam(name = "status", required = false) VendaStatus vendaStatus,
