@@ -58,7 +58,7 @@ app.controller("tillaCtrl", function ($scope, $http) {
 
 
 
-    $scope.frete = function (cep) {
+    $scope.frete = function (cep, remetente) {
         console.log(cep);
 
         if ($scope.texto.indexOf("[valor]") < 0 ||
@@ -73,8 +73,8 @@ app.controller("tillaCtrl", function ($scope, $http) {
 
             localStorage.setItem("texto", $scope.texto);
 
-            atualizaTexto(getDataPac(cep), '[valor]', '[prazo]', $scope, $http);
-            atualizaTexto(getDataSedex(cep), '[valors]', '[prazos]', $scope, $http)
+            atualizaTexto(getDataPac(cep, remetente), '[valor]', '[prazo]', $scope, $http);
+            atualizaTexto(getDataSedex(cep, remetente), '[valors]', '[prazos]', $scope, $http)
 
         }
     }
@@ -99,12 +99,12 @@ app.directive('selectOnClick', ['$window', function ($window) {
 }]);
 
 
-function getDataPac(cep) {
-    return "nCdEmpresa=&sDsSenha=&nCdServico=41106&sCepOrigem=31160-440&sCepDestino=" + cep + "&nVlPeso=0.3&nCdFormato=1&nVlComprimento=18&nVlAltura=9&nVlLargura=27&nVlDiametro=0&sCdMaoPropria=&nVlValorDeclarado=0&sCdAvisoRecebimento=N";
+function getDataPac(cep, remetente) {
+    return "nCdEmpresa=&sDsSenha=&nCdServico=04510&sCepOrigem="+remetente+"&sCepDestino=" + cep + "&nVlPeso=0.3&nCdFormato=1&nVlComprimento=18&nVlAltura=9&nVlLargura=27&nVlDiametro=0&sCdMaoPropria=&nVlValorDeclarado=0&sCdAvisoRecebimento=N";
 }
 
-function getDataSedex(cep) {
-    return "nCdEmpresa=&sDsSenha=&nCdServico=40010 &sCepOrigem=31160-440&sCepDestino=" + cep + "&nVlPeso=0.3&nCdFormato=1&nVlComprimento=18&nVlAltura=9&nVlLargura=27&nVlDiametro=0&sCdMaoPropria=&nVlValorDeclarado=0&sCdAvisoRecebimento=N";
+function getDataSedex(cep, remetente) {
+    return "nCdEmpresa=&sDsSenha=&nCdServico=04014&sCepOrigem="+remetente+"&sCepDestino=" + cep + "&nVlPeso=0.3&nCdFormato=1&nVlComprimento=18&nVlAltura=9&nVlLargura=27&nVlDiametro=0&sCdMaoPropria=&nVlValorDeclarado=0&sCdAvisoRecebimento=N";
 }
 
 function getTextoInicial() {
