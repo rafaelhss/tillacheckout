@@ -14,7 +14,11 @@ app.controller("NovaVendaController", function ($scope, $http, $location, TillaC
 
             console.log(data)
             $scope.venda = data.data;
-            $scope.venda.link = TillaConfig.baseurl + "/vendapendente/novavenda.html#?codigo=" + $scope.venda.codigo;
+            var link = TillaConfig.baseurl + "/vendapendente/novavenda.html#?codigo=" + $scope.venda.codigo;
+
+            var mensagem = "Após fazer o pagamento, poderia por favor cadastrar seu endereço de entrega no link a seguir: " + $scope.venda.link;
+
+
             $scope.venda.criada = true;
         }, function(error){
             console.log(error)
