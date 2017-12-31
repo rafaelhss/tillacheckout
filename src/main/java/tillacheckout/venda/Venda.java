@@ -30,6 +30,8 @@ public class Venda {
     private String facebook;
     private String produtos;
 
+
+
     @OneToOne(cascade = CascadeType.ALL)
     private Endereco endereco;
 

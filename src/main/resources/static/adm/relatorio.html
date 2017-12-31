@@ -68,9 +68,10 @@
                      <span ng-click="filtro.vendaStatus = 'ENVIADO_CORREIOS'" ng-class="filtro.vendaStatus == 'ENVIADO_CORREIOS' ? 'btn-info': 'btn-primary'"class="btn btn-primary">
                          <i class="fa fa-filter" aria-hidden="true"></i> ENVIADO_CORREIOS
                      </span>
-                        <span ng-click="filtro.vendaStatus = undefined" ng-class="filtro.vendaStatus == undefined ? 'btn-info': 'btn-primary'"class="btn btn-primary">
+                     <span ng-click="filtro.vendaStatus = undefined" ng-class="filtro.vendaStatus == undefined ? 'btn-info': 'btn-primary'"class="btn btn-primary">
                          <i class="fa fa-filter" aria-hidden="true"></i> TODAS
                      </span>
+                        <a href="/adm/novavenda.html" class="btn btn-success">Novo pedido</a>
                     </div>
 
                      <tr ng-repeat="venda in vendas | filter:filtro.vendaStatus ">

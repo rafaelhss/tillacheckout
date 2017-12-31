@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="tillaApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
+
+
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="../bower_components/angular-route/angular-route.js"></script>
+    <script src="../bower_components/x2js/xml2json.js"></script>
+
+    <script src="../bower_components/ng-dialog/js/ngDialog.min.js"></script>
+
+
+
+    <script src="../js/ng-file-model.js"></script>
+
+    <script src="../js/tillaapp.js"></script>
+    <script src="../js/Upload.js"></script>
+    <script src="../js/NovaVendaController.js"></script>
+
+    <link rel="stylesheet" href="../style.css">
+
+    <title>Tilla Checkout</title>
+
+</head>
+
+<body ng-controller="tillaCtrl">
+    <div class="container" ng-controller="NovaVendaController">
+
+        <div class="jumbotron logo">
+            <h1>Tilla Viana</h1>
+            <h2 class="fancy"><span>Checkout</span></h2>
+        </div>
+
+         <div class="row session">
+             <div ng-hide="venda.criada" class="col-md-6 col-md-padding-3">
+                 <div class="form-group">
+                     <label for="nome">Nome:</label>
+                     <input type="text" class="form-control" id="nome" ng-model="venda.nome">
+                 </div>
+                 <div class="form-group">
+                     <label for="whatsapp">whatsapp:</label>
+                     <input type="cel" class="form-control" id="whatsapp" ng-model="venda.whatsapp" ng-keyup="validarWhatsapp(whatsapp)">
+                 </div>
+                 <div class="form-group">
+                     <label for="produtos">produtos e quantidades:</label>
+                     <textarea placeholder="Escreva aqui o que voce comprou. por exemplo: 3 caixas de clilos modelo 047, duas paletas atelier e um picel coastal scents"
+                               class="form-control" id="produtos" ng-model="venda.produtos" rows="7" ng-keyup="validarProdutos(produtos)"></textarea>
+                 </div>
+                 <button class="btn btn-success" ng-click="criarVenda(venda)">Criar</button>
+             </div>
+             <div ng-show="carregando" class="col-md-12 text-center">
+                 <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+             </div>
+             <div ng-show="venda.criada" class="col-md-6 col-md-padding-3">
+                 <div class="form-group">
+                     <label for="link">Link (enviar para a cliente):</label>
+                     <input type="text" class="form-control" id="link" ng-model="venda.link" select-on-click>
+                 </div>
+             </div>
+
+
+         </div>
+    </div>
+
+
+</body>
+</html>
